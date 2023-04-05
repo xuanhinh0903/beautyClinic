@@ -53,6 +53,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     textAlign: "center",
     paddingBottom: "70px",
+    maxWidth: "1440px",
+    margin: "0 auto",
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
@@ -210,8 +212,8 @@ const useStyles = makeStyles((theme) => ({
   },
   bgColorF: {
     backgroundColor: "#FFFFFF",
-    maxWidth: "1519.2px",
-    margin: "0 auto",
+    // maxWidth: "1519.2px",
+    // margin: "0 auto",
     "& .bgPlay": {
       backgroundImage: `url(${servicePersion})`,
       backgroundSize: "100%",
@@ -373,6 +375,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textQuestion: {},
+  wrap1440: {
+    maxWidth: "1440px",
+    margin: "0 auto",
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -396,9 +402,11 @@ const Service = () => {
   };
   return (
     <Box className={classes.bgColorF}>
-      <Box className={classes.wrapper}>
-        <Box className={classes.wrapHeader}>
-          <Header handleClick={handleClickOpen} />
+      <Box className={classes.wrap1440}>
+        <Box className={classes.wrapper}>
+          <Box className={classes.wrapHeader}>
+            <Header handleClick={handleClickOpen} />
+          </Box>
         </Box>
       </Box>
 
@@ -414,97 +422,103 @@ const Service = () => {
         </Box>
 
         <Box className={classes.wrapper170}>
-          <Box className={classes.flexDoctor1}>
-            <img className={"imgFlexDoctor1"} src={doctor1} />
-            <img className={"imgFlexDoctor2"} src={doctor2} />
-          </Box>
-          <Box className={classes.flexDoctor2}>
-            <img className={"imgFlexDoctor3"} src={doctor3} />
-            <img className={"imgFlexDoctor4"} src={doctor4} />
-          </Box>
-        </Box>
-      </Box>
-
-      <Box className={classes.introduce1}>
-        <Box className={classes.wrapper}>
-          <Box className={classes.flex}>
-            <img className={classes.imgPlay} src={service1} />
-            <Box className={classes.flexsWithAbout}>
-              <Box className={classes.doubleButton}>
-                <Typography className={"textAbout"}>
-                  Beauty Consultation
-                </Typography>
-                <Typography className={"textAboutBoldblueClient"}>
-                  We services beauty consultation
-                </Typography>
-                <Typography className={"textAboutBlurGray"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
-                  libero.
-                </Typography>
-                <Box className="flexTextMore">
-                  <Typography className="textMore">
-                    Make an Appointment
-                  </Typography>
-                  <img src={more} />
-                </Box>
-              </Box>
+          <Box className={classes.wrap1440}>
+            <Box className={classes.flexDoctor1}>
+              <img className={"imgFlexDoctor1"} src={doctor1} />
+              <img className={"imgFlexDoctor2"} src={doctor2} />
+            </Box>
+            <Box className={classes.flexDoctor2}>
+              <img className={"imgFlexDoctor3"} src={doctor3} />
+              <img className={"imgFlexDoctor4"} src={doctor4} />
             </Box>
           </Box>
         </Box>
       </Box>
 
-      <Box className={classes.introduce1}>
-        <Box className={classes.wrapper}>
-          <Box className={classes.flex}>
-            <Box className={classes.flexsWithAbout}>
-              <Box className={`${classes.doubleButton} ${classes.paddingBT50}`}>
-                <Typography className={"textAbout"}>
-                  Beauty Consultation
-                </Typography>
-                <Typography className={"textAboutBoldblueClient"}>
-                  We services beauty consultation
-                </Typography>
-                <Typography className={"textAboutBlurGray"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
-                  libero.
-                </Typography>
-                <Box className="flexTextMore">
-                  <Typography className="textMore">
-                    Make an Appointment
+      <Box className={classes.wrap1440}>
+        <Box className={classes.introduce1}>
+          <Box className={classes.wrapper}>
+            <Box className={classes.flex}>
+              <img className={classes.imgPlay} src={service1} />
+              <Box className={classes.flexsWithAbout}>
+                <Box className={classes.doubleButton}>
+                  <Typography className={"textAbout"}>
+                    Beauty Consultation
                   </Typography>
-                  <img src={more} />
+                  <Typography className={"textAboutBoldblueClient"}>
+                    We services beauty consultation
+                  </Typography>
+                  <Typography className={"textAboutBlurGray"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Elit, quam suscipit purus donec amet. Egestas volutpat
+                    facilisi eu libero.
+                  </Typography>
+                  <Box className="flexTextMore">
+                    <Typography className="textMore">
+                      Make an Appointment
+                    </Typography>
+                    <img src={more} />
+                  </Box>
                 </Box>
               </Box>
             </Box>
-            <img className={classes.imgPlay} src={service2} />
           </Box>
         </Box>
-      </Box>
 
-      <Box className={classes.introduce1}>
-        <Box className={classes.wrapper}>
-          <Box className={classes.flex}>
-            <img className={classes.imgPlay} src={service3} />
-            <Box className={classes.flexsWithAbout}>
-              <Box className={classes.doubleButton}>
-                <Typography className={"textAbout"}>
-                  Beauty Consultation
-                </Typography>
-                <Typography className={"textAboutBoldblueClient"}>
-                  We services beauty consultation
-                </Typography>
-                <Typography className={"textAboutBlurGray"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
-                  libero.
-                </Typography>
-                <Box className="flexTextMore">
-                  <Typography className="textMore">
-                    Make an Appointment
+        <Box className={classes.introduce1}>
+          <Box className={classes.wrapper}>
+            <Box className={classes.flex}>
+              <Box className={classes.flexsWithAbout}>
+                <Box
+                  className={`${classes.doubleButton} ${classes.paddingBT50}`}
+                >
+                  <Typography className={"textAbout"}>
+                    Beauty Consultation
                   </Typography>
-                  <img src={more} />
+                  <Typography className={"textAboutBoldblueClient"}>
+                    We services beauty consultation
+                  </Typography>
+                  <Typography className={"textAboutBlurGray"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Elit, quam suscipit purus donec amet. Egestas volutpat
+                    facilisi eu libero.
+                  </Typography>
+                  <Box className="flexTextMore">
+                    <Typography className="textMore">
+                      Make an Appointment
+                    </Typography>
+                    <img src={more} />
+                  </Box>
+                </Box>
+              </Box>
+              <img className={classes.imgPlay} src={service2} />
+            </Box>
+          </Box>
+        </Box>
+
+        <Box className={classes.introduce1}>
+          <Box className={classes.wrapper}>
+            <Box className={classes.flex}>
+              <img className={classes.imgPlay} src={service3} />
+              <Box className={classes.flexsWithAbout}>
+                <Box className={classes.doubleButton}>
+                  <Typography className={"textAbout"}>
+                    Beauty Consultation
+                  </Typography>
+                  <Typography className={"textAboutBoldblueClient"}>
+                    We services beauty consultation
+                  </Typography>
+                  <Typography className={"textAboutBlurGray"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Elit, quam suscipit purus donec amet. Egestas volutpat
+                    facilisi eu libero.
+                  </Typography>
+                  <Box className="flexTextMore">
+                    <Typography className="textMore">
+                      Make an Appointment
+                    </Typography>
+                    <img src={more} />
+                  </Box>
                 </Box>
               </Box>
             </Box>
@@ -515,23 +529,25 @@ const Service = () => {
       <Box className={"bgPlay"}>
         <Box className="bgPlayColor">
           <Box className={classes.wrapper}>
-            <Box className={classes.flexAbout}>
-              <Box className={classes.flexAboutChild}>
-                <Typography className={"textAboutBold"}>
-                  Your beauty center place
-                </Typography>
-                <Typography className={"textAboutBlur"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis
-                </Typography>
-              </Box>
-              <Box className={classes.wrapPlayIcon}>
-                <Box className="round">
-                  <img className={"playRound"} src={playRound} />
+            <Box className={classes.wrap1440}>
+              <Box className={classes.flexAbout}>
+                <Box className={classes.flexAboutChild}>
+                  <Typography className={"textAboutBold"}>
+                    Your beauty center place
+                  </Typography>
+                  <Typography className={"textAboutBlur"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis
+                  </Typography>
                 </Box>
-                <Typography className={"textPlay"}>
-                  Treatments Videos
-                </Typography>
+                <Box className={classes.wrapPlayIcon}>
+                  <Box className="round">
+                    <img className={"playRound"} src={playRound} />
+                  </Box>
+                  <Typography className={"textPlay"}>
+                    Treatments Videos
+                  </Typography>
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -552,176 +568,185 @@ const Service = () => {
       >
         <BlockNew />
       </Dialog>
-
-      <Box className={classes.wrapper}>
-        <Box className={classes.selectOption}>
-          <List className="wrapSelect" id="hehe1" size="sm">
-            <ListItem
-              nested
-              className="wrapSelectChild"
-              sx={{ my: 1 }}
-              endAction={
-                <IconButton
-                  variant="plain"
-                  size="sm"
-                  color="#091156"
-                  onClick={() => setOpen2((bool) => !bool)}
-                >
-                  <KeyboardArrowDown
-                    sx={{
-                      transform: open2 ? "rotate(-180deg)" : "rotate(-360deg)",
-                    }}
-                  />
-                </IconButton>
-              }
-            >
-              <ListItem className="wrapSelectChildren">
-                <Typography
-                  level="inherit"
-                  id="test"
-                  className={"textQuestion"}
-                >
-                  Is beauty consultation handled thoroughly?
-                </Typography>
+      <Box className={classes.wrap1440}>
+        <Box className={classes.wrapper}>
+          <Box className={classes.selectOption}>
+            <List className="wrapSelect" id="hehe1" size="sm">
+              <ListItem
+                nested
+                className="wrapSelectChild"
+                sx={{ my: 1 }}
+                endAction={
+                  <IconButton
+                    variant="plain"
+                    size="sm"
+                    color="#091156"
+                    onClick={() => setOpen2((bool) => !bool)}
+                  >
+                    <KeyboardArrowDown
+                      sx={{
+                        transform: open2
+                          ? "rotate(-180deg)"
+                          : "rotate(-360deg)",
+                      }}
+                    />
+                  </IconButton>
+                }
+              >
+                <ListItem className="wrapSelectChildren">
+                  <Typography
+                    level="inherit"
+                    id="test"
+                    className={"textQuestion"}
+                  >
+                    Is beauty consultation handled thoroughly?
+                  </Typography>
+                </ListItem>
+                {open2 && (
+                  <Box className={classes.answer}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                    fringilla urna
+                    <br /> <br /> porttitor rhoncus dolor purus non enim
+                    praesent elementum facilisis leo, vel fringilla est
+                    ullamcorper eget nulla
+                  </Box>
+                )}
               </ListItem>
-              {open2 && (
-                <Box className={classes.answer}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis, lectus magna
-                  fringilla urna
-                  <br /> <br /> porttitor rhoncus dolor purus non enim praesent
-                  elementum facilisis leo, vel fringilla est ullamcorper eget
-                  nulla
-                </Box>
-              )}
-            </ListItem>
-          </List>
+            </List>
 
-          <List className="wrapSelect" id="hehe1" size="sm">
-            <ListItem
-              nested
-              className="wrapSelectChild"
-              sx={{ my: 1 }}
-              endAction={
-                <IconButton
-                  variant="plain"
-                  size="sm"
-                  color="#091156"
-                  onClick={() => setOpen3((bool) => !bool)}
-                >
-                  <KeyboardArrowDown
-                    sx={{
-                      transform: open3 ? "rotate(-180deg)" : "rotate(-360deg)",
-                    }}
-                  />
-                </IconButton>
-              }
-            >
-              <ListItem className="wrapSelectChildren">
-                <Typography
-                  level="inherit"
-                  id="test"
-                  className={"textQuestion"}
-                >
-                  Is beauty consultation handled thoroughly?
-                </Typography>
+            <List className="wrapSelect" id="hehe1" size="sm">
+              <ListItem
+                nested
+                className="wrapSelectChild"
+                sx={{ my: 1 }}
+                endAction={
+                  <IconButton
+                    variant="plain"
+                    size="sm"
+                    color="#091156"
+                    onClick={() => setOpen3((bool) => !bool)}
+                  >
+                    <KeyboardArrowDown
+                      sx={{
+                        transform: open3
+                          ? "rotate(-180deg)"
+                          : "rotate(-360deg)",
+                      }}
+                    />
+                  </IconButton>
+                }
+              >
+                <ListItem className="wrapSelectChildren">
+                  <Typography
+                    level="inherit"
+                    id="test"
+                    className={"textQuestion"}
+                  >
+                    Is beauty consultation handled thoroughly?
+                  </Typography>
+                </ListItem>
+                {open3 && (
+                  <Box className={classes.answer}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                    fringilla urna
+                    <br /> <br /> porttitor rhoncus dolor purus non enim
+                    praesent elementum facilisis leo, vel fringilla est
+                    ullamcorper eget nulla
+                  </Box>
+                )}
               </ListItem>
-              {open3 && (
-                <Box className={classes.answer}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis, lectus magna
-                  fringilla urna
-                  <br /> <br /> porttitor rhoncus dolor purus non enim praesent
-                  elementum facilisis leo, vel fringilla est ullamcorper eget
-                  nulla
-                </Box>
-              )}
-            </ListItem>
-          </List>
+            </List>
 
-          <List className="wrapSelect" id="hehe1" size="sm">
-            <ListItem
-              nested
-              className="wrapSelectChild"
-              sx={{ my: 1 }}
-              endAction={
-                <IconButton
-                  variant="plain"
-                  size="sm"
-                  color="#091156"
-                  onClick={() => setOpen4((bool) => !bool)}
-                >
-                  <KeyboardArrowDown
-                    sx={{
-                      transform: open4 ? "rotate(-180deg)" : "rotate(-360deg)",
-                    }}
-                  />
-                </IconButton>
-              }
-            >
-              <ListItem className="wrapSelectChildren">
-                <Typography
-                  level="inherit"
-                  id="test"
-                  className={"textQuestion"}
-                >
-                  Is beauty consultation handled thoroughly?
-                </Typography>
+            <List className="wrapSelect" id="hehe1" size="sm">
+              <ListItem
+                nested
+                className="wrapSelectChild"
+                sx={{ my: 1 }}
+                endAction={
+                  <IconButton
+                    variant="plain"
+                    size="sm"
+                    color="#091156"
+                    onClick={() => setOpen4((bool) => !bool)}
+                  >
+                    <KeyboardArrowDown
+                      sx={{
+                        transform: open4
+                          ? "rotate(-180deg)"
+                          : "rotate(-360deg)",
+                      }}
+                    />
+                  </IconButton>
+                }
+              >
+                <ListItem className="wrapSelectChildren">
+                  <Typography
+                    level="inherit"
+                    id="test"
+                    className={"textQuestion"}
+                  >
+                    Is beauty consultation handled thoroughly?
+                  </Typography>
+                </ListItem>
+                {open4 && (
+                  <Box className={classes.answer}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                    fringilla urna
+                    <br /> <br /> porttitor rhoncus dolor purus non enim
+                    praesent elementum facilisis leo, vel fringilla est
+                    ullamcorper eget nulla
+                  </Box>
+                )}
               </ListItem>
-              {open4 && (
-                <Box className={classes.answer}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis, lectus magna
-                  fringilla urna
-                  <br /> <br /> porttitor rhoncus dolor purus non enim praesent
-                  elementum facilisis leo, vel fringilla est ullamcorper eget
-                  nulla
-                </Box>
-              )}
-            </ListItem>
-          </List>
+            </List>
 
-          <List className="wrapSelect" id="hehe1" size="sm">
-            <ListItem
-              nested
-              className="wrapSelectChild"
-              sx={{ my: 1 }}
-              endAction={
-                <IconButton
-                  variant="plain"
-                  size="sm"
-                  color="#091156"
-                  onClick={() => setOpen5((bool) => !bool)}
-                >
-                  <KeyboardArrowDown
-                    sx={{
-                      transform: open5 ? "rotate(-180deg)" : "rotate(-360deg)",
-                    }}
-                  />
-                </IconButton>
-              }
-            >
-              <ListItem className="wrapSelectChildren">
-                <Typography
-                  level="inherit"
-                  id="test"
-                  className={"textQuestion"}
-                >
-                  Is beauty consultation handled thoroughly?
-                </Typography>
+            <List className="wrapSelect" id="hehe1" size="sm">
+              <ListItem
+                nested
+                className="wrapSelectChild"
+                sx={{ my: 1 }}
+                endAction={
+                  <IconButton
+                    variant="plain"
+                    size="sm"
+                    color="#091156"
+                    onClick={() => setOpen5((bool) => !bool)}
+                  >
+                    <KeyboardArrowDown
+                      sx={{
+                        transform: open5
+                          ? "rotate(-180deg)"
+                          : "rotate(-360deg)",
+                      }}
+                    />
+                  </IconButton>
+                }
+              >
+                <ListItem className="wrapSelectChildren">
+                  <Typography
+                    level="inherit"
+                    id="test"
+                    className={"textQuestion"}
+                  >
+                    Is beauty consultation handled thoroughly?
+                  </Typography>
+                </ListItem>
+                {open5 && (
+                  <Box className={classes.answer}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                    aliquam, purus sit amet luctus venenatis, lectus magna
+                    fringilla urna
+                    <br /> <br /> porttitor rhoncus dolor purus non enim
+                    praesent elementum facilisis leo, vel fringilla est
+                    ullamcorper eget nulla
+                  </Box>
+                )}
               </ListItem>
-              {open5 && (
-                <Box className={classes.answer}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                  aliquam, purus sit amet luctus venenatis, lectus magna
-                  fringilla urna
-                  <br /> <br /> porttitor rhoncus dolor purus non enim praesent
-                  elementum facilisis leo, vel fringilla est ullamcorper eget
-                  nulla
-                </Box>
-              )}
-            </ListItem>
-          </List>
+            </List>
+          </Box>
         </Box>
       </Box>
 

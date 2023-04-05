@@ -392,6 +392,10 @@ const useStyles = makeStyles((theme) => ({
     right: "65px",
     cursor: "pointer",
   },
+  wrap1440: {
+    maxWidth: "1440px",
+    margin: "0 auto",
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -414,50 +418,51 @@ const Home1 = () => {
   return (
     <Box
       sx={{
-        maxWidth: "1519.2px",
-        margin: "0 auto",
-        scrollBehavior: "smooth !important",
+        // maxWidth: "1519.2px",
+        // margin: "0 auto",
         position: "relative",
       }}
     >
       <Box id="top" className={classes.fixPaddingHead}>
-        <Box className={classes.fixPaddingHeader}>
-          <Header handleClick={handleClickOpen} />
-        </Box>
-        <Box className={classes.wrapper}>
-          <Box className={classes.check}>
-            <Box className={classes.fixPadding} sx={{ paddingRight: "22px" }}>
-              <Typography
-                className={`${classes.wrapText} ${classes.wrapTextBig}`}
-                sx={textBoldBlue}
-              >
-                Clinic & beauty consultant
-              </Typography>
-              <Typography className={classes.wrapText} sx={textSmallBlue}>
-                It is a long established fact that a reader will be by the
-                readable content of a page.
-              </Typography>
-              <Button
-                className={classes.repsonBt}
-                sx={{
-                  ":hover": {
-                    bgcolor: "#f52e8d",
-                  },
-                  padding: 0,
-                  display: "inline-block",
-                  width: "200px",
-                  height: "58.36px",
-                  bgcolor: "#FF64AE",
-                  color: "#fff",
-                  borderRadius: "50px",
-                  fontFamily: "Poppins",
-                }}
-                variant="text"
-              >
-                More Details
-              </Button>
+        <Box className={classes.wrap1440}>
+          <Box className={classes.fixPaddingHeader}>
+            <Header handleClick={handleClickOpen} />
+          </Box>
+          <Box className={classes.wrapper}>
+            <Box className={classes.check}>
+              <Box className={classes.fixPadding} sx={{ paddingRight: "22px" }}>
+                <Typography
+                  className={`${classes.wrapText} ${classes.wrapTextBig}`}
+                  sx={textBoldBlue}
+                >
+                  Clinic & beauty consultant
+                </Typography>
+                <Typography className={classes.wrapText} sx={textSmallBlue}>
+                  It is a long established fact that a reader will be by the
+                  readable content of a page.
+                </Typography>
+                <Button
+                  className={classes.repsonBt}
+                  sx={{
+                    ":hover": {
+                      bgcolor: "#f52e8d",
+                    },
+                    padding: 0,
+                    display: "inline-block",
+                    width: "200px",
+                    height: "58.36px",
+                    bgcolor: "#FF64AE",
+                    color: "#fff",
+                    borderRadius: "50px",
+                    fontFamily: "Poppins",
+                  }}
+                  variant="text"
+                >
+                  More Details
+                </Button>
+              </Box>
+              <img className={classes.img} src={persion} />
             </Box>
-            <img className={classes.img} src={persion} />
           </Box>
         </Box>
       </Box>
@@ -469,108 +474,114 @@ const Home1 = () => {
         </Box>
       </Box>
       {/*  */}
-      <Box className={classes.textService}>
-        <Typography sx={textMainService}>Main Services</Typography>
-        <Typography sx={textMainServiceBold}>
-          Learn services to focus on your beauty
-        </Typography>
-        <Typography sx={textMainServiceBlur}>
-          Porta rhoncus orci condimentum vitae lobortis eu dignissim non massa.
-          Non parturient amet, feugiat tellus sagittis, scelerisque eget nulla
-          turpis.
-        </Typography>
+      <Box className={classes.wrap1440}>
+        <Box className={classes.textService}>
+          <Typography sx={textMainService}>Main Services</Typography>
+          <Typography sx={textMainServiceBold}>
+            Learn services to focus on your beauty
+          </Typography>
+          <Typography sx={textMainServiceBlur}>
+            Porta rhoncus orci condimentum vitae lobortis eu dignissim non
+            massa. Non parturient amet, feugiat tellus sagittis, scelerisque
+            eget nulla turpis.
+          </Typography>
+        </Box>
       </Box>
 
       <Box className={classes.bgAbout}>
-        <Box className={classes.listWrapService}>
-          <Box className={classes.wrapperService}>
-            <img className={classes.ImgService} src={AnimationCheck} />
-            <Typography className={classes.textServiceIn}>
-              <Box className={classes.textBold18}>Beauty consultation</Box>
-            </Typography>
-            <Typography className={classes.textGreyService}>
-              <Box className={classes.textGrey14}>
-                Non parturient amet, feugiat tellus sagittis, scelerisque eget
-                nulla turpis.
-              </Box>
-            </Typography>
-          </Box>
+        <Box className={classes.wrap1440}>
+          <Box className={classes.listWrapService}>
+            <Box className={classes.wrapperService}>
+              <img className={classes.ImgService} src={AnimationCheck} />
+              <Typography className={classes.textServiceIn}>
+                <Box className={classes.textBold18}>Beauty consultation</Box>
+              </Typography>
+              <Typography className={classes.textGreyService}>
+                <Box className={classes.textGrey14}>
+                  Non parturient amet, feugiat tellus sagittis, scelerisque eget
+                  nulla turpis.
+                </Box>
+              </Typography>
+            </Box>
 
-          <Box className={classes.wrapperService}>
-            <img className={classes.ImgService} src={AnimationCheck} />
-            <Typography className={classes.textServiceIn}>
-              <Box className={classes.textBold18}>Beauty consultation</Box>
-            </Typography>
-            <Typography className={classes.textGreyService}>
-              <Box className={classes.textGrey14}>
-                Non parturient amet, feugiat tellus sagittis, scelerisque eget
-                nulla turpis.
-              </Box>
-            </Typography>
-          </Box>
+            <Box className={classes.wrapperService}>
+              <img className={classes.ImgService} src={AnimationCheck} />
+              <Typography className={classes.textServiceIn}>
+                <Box className={classes.textBold18}>Beauty consultation</Box>
+              </Typography>
+              <Typography className={classes.textGreyService}>
+                <Box className={classes.textGrey14}>
+                  Non parturient amet, feugiat tellus sagittis, scelerisque eget
+                  nulla turpis.
+                </Box>
+              </Typography>
+            </Box>
 
-          <Box className={classes.wrapperService}>
-            <img className={classes.ImgService} src={AnimationCheck} />
-            <Typography className={classes.textServiceIn}>
-              <Box className={classes.textBold18}>Beauty consultation</Box>
-            </Typography>
-            <Typography className={classes.textGreyService}>
-              <Box className={classes.textGrey14}>
-                Non parturient amet, feugiat tellus sagittis, scelerisque eget
-                nulla turpis.
-              </Box>
-            </Typography>
-          </Box>
-        </Box>
-        <Box className={classes.flexAbout}>
-          <Box>
-            <Typography sx={textMainService}>About Us</Typography>
-            <Typography sx={textAboutBold}>
-              We are the best beauty clinic
-            </Typography>
-            <Typography className={classes.textAboutBlur} sx={textAboutBlur}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-              quam suscipit purus donec amet. Egestas volutpat facilisi eu
-              libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius
-              tellus in suspendisse placerat.
-              <br />
-              <br /> Id dui erat sed quam tellus in purus. Pellentesque congue
-              fringilla cras tellus enim.
-            </Typography>
-            <Box className={classes.doubleButton}>
-              <Button
-                className={"buttonPinkLearn"}
-                sx={buttonPink}
-                variant="text"
-              >
-                Learn More
-              </Button>
-              <Button
-                className={classes.flexButton}
-                variant="text"
-                sx={buttonPlay}
-                size="large"
-              >
-                <img style={{ paddingRight: "13px" }} src={play} />
-                Watch Video
-              </Button>
+            <Box className={classes.wrapperService}>
+              <img className={classes.ImgService} src={AnimationCheck} />
+              <Typography className={classes.textServiceIn}>
+                <Box className={classes.textBold18}>Beauty consultation</Box>
+              </Typography>
+              <Typography className={classes.textGreyService}>
+                <Box className={classes.textGrey14}>
+                  Non parturient amet, feugiat tellus sagittis, scelerisque eget
+                  nulla turpis.
+                </Box>
+              </Typography>
             </Box>
           </Box>
-          <img className={classes.imgAboutUs} src={aboutUs} />
-        </Box>
+          <Box className={classes.flexAbout}>
+            <Box>
+              <Typography sx={textMainService}>About Us</Typography>
+              <Typography sx={textAboutBold}>
+                We are the best beauty clinic
+              </Typography>
+              <Typography className={classes.textAboutBlur} sx={textAboutBlur}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
+                quam suscipit purus donec amet. Egestas volutpat facilisi eu
+                libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius
+                tellus in suspendisse placerat.
+                <br />
+                <br /> Id dui erat sed quam tellus in purus. Pellentesque congue
+                fringilla cras tellus enim.
+              </Typography>
+              <Box className={classes.doubleButton}>
+                <Button
+                  className={"buttonPinkLearn"}
+                  sx={buttonPink}
+                  variant="text"
+                >
+                  Learn More
+                </Button>
+                <Button
+                  className={classes.flexButton}
+                  variant="text"
+                  sx={buttonPlay}
+                  size="large"
+                >
+                  <img style={{ paddingRight: "13px" }} src={play} />
+                  Watch Video
+                </Button>
+              </Box>
+            </Box>
+            <img className={classes.imgAboutUs} src={aboutUs} />
+          </Box>
 
-        <Box className={classes.paddingWidthProfess}>
-          <TextProfessTeam />
+          <Box className={classes.paddingWidthProfess}>
+            <TextProfessTeam />
+          </Box>
         </Box>
       </Box>
 
       <Box className={classes.bgContact}>
-        <Box className={classes.imgProfess}>
-          <InfoProfess />
-        </Box>
+        <Box className={classes.wrap1440}>
+          <Box className={classes.imgProfess}>
+            <InfoProfess />
+          </Box>
 
-        <Box>
-          <ContactUs />
+          <Box>
+            <ContactUs />
+          </Box>
         </Box>
       </Box>
 

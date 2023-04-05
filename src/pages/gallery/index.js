@@ -255,7 +255,7 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
     },
     "& .buttonPinkLearn": {
-      ":hover": {
+      "&:hover": {
         backgroundColor: "#f52e8d",
       },
       color: "#fff",
@@ -333,8 +333,9 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  bgAll: {
-    maxWidth: "1519.2px",
+
+  wrap1440: {
+    maxWidth: "1440px",
     margin: "0 auto",
   },
 }));
@@ -358,67 +359,69 @@ const Gallery = () => {
 
   return (
     <Box className={classes.bgAll}>
-      <Box className={classes.wrapper}>
-        <Box className={"wrapperHeader"}>
-          <Header handleClick={handleClickOpen} />
-        </Box>
+      <Box className={classes.wrap1440}>
+        <Box className={classes.wrapper}>
+          <Box className={"wrapperHeader"}>
+            <Header handleClick={handleClickOpen} />
+          </Box>
 
-        <Box className={classes.flexRequest}>
-          <Box className={classes.blockText}>
-            <Typography className="textPink16">Our Gallery</Typography>
-            <Typography className="textBlueBold">
-              Check out the collection pictures from our clinic
+          <Box className={classes.flexRequest}>
+            <Box className={classes.blockText}>
+              <Typography className="textPink16">Our Gallery</Typography>
+              <Typography className="textBlueBold">
+                Check out the collection pictures from our clinic
+              </Typography>
+            </Box>
+            <Typography className={"textGrey"}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis
             </Typography>
           </Box>
-          <Typography className={"textGrey"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis
-          </Typography>
-        </Box>
 
-        <ImageList
-          className={"wrapAllImg"}
-          sx={{ width: 500, height: 450 }}
-          cols={3}
-          rowHeight={164}
-          id="tets"
-        >
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery1} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery2} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery3} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery4} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery5} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery6} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery7} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery8} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-          <ImageListItem id="hihi" className={"wrapimg"}>
-            <img src={gallery9} loading="lazy" className="imgGallery" />
-          </ImageListItem>
-        </ImageList>
+          <ImageList
+            className={"wrapAllImg"}
+            sx={{ width: 500, height: 450 }}
+            cols={3}
+            rowHeight={164}
+            id="tets"
+          >
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery1} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery2} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery3} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery4} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery5} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery6} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery7} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery8} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+            <ImageListItem id="hihi" className={"wrapimg"}>
+              <img src={gallery9} loading="lazy" className="imgGallery" />
+            </ImageListItem>
+          </ImageList>
 
-        <Box className={classes.wrapTextIntroduce}>
-          <p className="textGrey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis, lectus magna fringilla urna,
-            porttitor rhoncus dolor purus non enim,
-            <span className="contactBold"> our teams.</span>
-          </p>
+          <Box className={classes.wrapTextIntroduce}>
+            <p className="textGrey">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis, lectus magna fringilla
+              urna, porttitor rhoncus dolor purus non enim,
+              <span className="contactBold"> our teams.</span>
+            </p>
+          </Box>
         </Box>
       </Box>
 
@@ -449,23 +452,25 @@ const Gallery = () => {
       </Box>
 
       <Box className={classes.introduce1}>
-        <Box className={classes.wrapper}>
-          <Box className={classes.flex}>
-            <Box className={classes.flexsWithAbout}>
-              <Box className={classes.doubleButton}>
-                <Typography className={"textAbout"}>Get The Quota</Typography>
-                <Typography className={"textAboutBoldblueClient"}>
-                  Want to be handled by our professional team immediately?
-                </Typography>
-                <Typography className={"textAboutBlurGray"}>
-                  Id dui erat sed quam tellus in purus. Pellentesque congue
-                  fringilla cras tellus enim.
-                </Typography>
+        <Box className={classes.wrap1440}>
+          <Box className={classes.wrapper}>
+            <Box className={classes.flex}>
+              <Box className={classes.flexsWithAbout}>
+                <Box className={classes.doubleButton}>
+                  <Typography className={"textAbout"}>Get The Quota</Typography>
+                  <Typography className={"textAboutBoldblueClient"}>
+                    Want to be handled by our professional team immediately?
+                  </Typography>
+                  <Typography className={"textAboutBlurGray"}>
+                    Id dui erat sed quam tellus in purus. Pellentesque congue
+                    fringilla cras tellus enim.
+                  </Typography>
+                </Box>
               </Box>
+              <Button className={"buttonPinkLearn"} variant="text">
+                Make an Appointment
+              </Button>
             </Box>
-            <Button className={"buttonPinkLearn"} variant="text">
-              Make an Appointment
-            </Button>
           </Box>
         </Box>
       </Box>

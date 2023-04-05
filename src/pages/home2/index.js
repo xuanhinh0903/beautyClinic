@@ -37,8 +37,8 @@ const buttonPink = {
 
 const useStyles = makeStyles((theme) => ({
   home: {
-    maxWidth: "1519.2px",
-    margin: "0 auto",
+    // maxWidth: "1519.2px",
+    // margin: "0 auto",
     "& .wrapperHeader": {
       [theme.breakpoints.down(theme.sm)]: {
         textAlign: "center",
@@ -59,10 +59,13 @@ const useStyles = makeStyles((theme) => ({
       padding: "0 20px",
     },
     padding: "0 150px",
+    maxWidth: "1440px",
+    margin: "0 auto",
   },
   advertise: {
     display: "flex",
     // paddingBottom: "373px",
+    alignItems: "center",
     justifyContent: "space-between",
     [theme.breakpoints.down(theme.xl)]: {
       display: "block",
@@ -611,6 +614,10 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  wrap1440: {
+    maxWidth: "1440px",
+    margin: "0 auto",
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -634,25 +641,27 @@ const Home2 = () => {
       <Box className={classes.bgTop}>
         <Box className={classes.wrapper}>
           <Box className={"wrapperHeader"}>
-            <Box className={"wrapperHeaderChild"}>
-              <Header handleClick={handleClickOpen} />
-            </Box>
-
-            <Box className={classes.flexAbout}>
-              <Box className={classes.flexAboutChild}>
-                <Typography className={classes.textAboutBold}>
-                  Your beauty center place
-                </Typography>
-                <Typography className={classes.textAboutBlur}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Commodo, massa pellentesque arcu fusce et magna consequat
-                  neque vitae lobortis.
-                </Typography>
-                <Button className={"moreDetail"} variant="text">
-                  More Details
-                </Button>
+            <Box className={classes.wrapper1440}>
+              <Box className={"wrapperHeaderChild"}>
+                <Header handleClick={handleClickOpen} />
               </Box>
-              <img className={classes.imgPlay} src={playWhite} />
+
+              <Box className={classes.flexAbout}>
+                <Box className={classes.flexAboutChild}>
+                  <Typography className={classes.textAboutBold}>
+                    Your beauty center place
+                  </Typography>
+                  <Typography className={classes.textAboutBlur}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Commodo, massa pellentesque arcu fusce et magna consequat
+                    neque vitae lobortis.
+                  </Typography>
+                  <Button className={"moreDetail"} variant="text">
+                    More Details
+                  </Button>
+                </Box>
+                <img className={classes.imgPlay} src={playWhite} />
+              </Box>
             </Box>
           </Box>
         </Box>

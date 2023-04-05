@@ -186,110 +186,116 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "50%",
     },
   },
+  wrap1440: {
+    maxWidth: "1440px",
+    margin: "0 auto",
+  },
 }));
 const Footer = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.wrap}>
+    <Box className={classes.wrap}>
       <Box className={classes.wrapper}>
-        <Box className={"wrapBlock"}>
-          <Box className={classes.block1}>
-            <Box className={"wrapLogo"}>
-              <Box className={styles.logoFull}>
-                <img className={styles.bgPink} src={bgPink} />
-                <img className={styles.dotBig} src={dotBig} />
-                <img className={styles.dotSmall} src={dotSmall} />
-                <img className={styles.recTangBlue} src={recTangBlue} />
+        <Box className={classes.wrap1440}>
+          <Box className={"wrapBlock"}>
+            <Box className={classes.block1}>
+              <Box className={"wrapLogo"}>
+                <Box className={styles.logoFull}>
+                  <img className={styles.bgPink} src={bgPink} />
+                  <img className={styles.dotBig} src={dotBig} />
+                  <img className={styles.dotSmall} src={dotSmall} />
+                  <img className={styles.recTangBlue} src={recTangBlue} />
+                </Box>
+                <Typography className="textLogo">Beautice</Typography>
               </Box>
-              <Typography className="textLogo">Beautice</Typography>
+              <Typography className="textBoldSmall">
+                <p className="textBold">
+                  Beautice{" "}
+                  <span class="textBlur">
+                    is a Beauty Clinic WordPress Theme.
+                  </span>
+                </p>
+              </Typography>
+              <Typography className={"italicized"}>
+                Baker Steet 101, NY, United States.
+              </Typography>
+              <Box className={"wrapItalicized"}>
+                <Typography className={"italicized"}>+521 569 8966.</Typography>
+                <Typography className="italicizedEmail">
+                  mail@company.com.
+                </Typography>
+              </Box>
             </Box>
-            <Typography className="textBoldSmall">
-              <p className="textBold">
-                Beautice{" "}
-                <span class="textBlur">
-                  is a Beauty Clinic WordPress Theme.
-                </span>
-              </p>
-            </Typography>
-            <Typography className={"italicized"}>
-              Baker Steet 101, NY, United States.
-            </Typography>
-            <Box className={"wrapItalicized"}>
-              <Typography className={"italicized"}>+521 569 8966.</Typography>
-              <Typography className="italicizedEmail">
-                mail@company.com.
+            <Box className={classes.block2}>
+              <Typography className="textBoldWhite">Page</Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Home
+              </Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                About
+              </Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Services
+              </Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Gallery
+              </Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Team
+              </Typography>
+            </Box>
+            <Box className={classes.block2}>
+              <Typography className="textBoldWhite">Informations</Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Terms & conditions
+              </Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Privacy policy
+              </Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Blog
+              </Typography>
+              <Typography className="textSmall">
+                <img className="ImgPadd" src={arrowOption} />
+                Contact
               </Typography>
             </Box>
           </Box>
-          <Box className={classes.block2}>
-            <Typography className="textBoldWhite">Page</Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Home
-            </Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              About
-            </Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Services
-            </Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Gallery
-            </Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Team
-            </Typography>
-          </Box>
-          <Box className={classes.block2}>
-            <Typography className="textBoldWhite">Informations</Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Terms & conditions
-            </Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Privacy policy
-            </Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Blog
-            </Typography>
-            <Typography className="textSmall">
-              <img className="ImgPadd" src={arrowOption} />
-              Contact
-            </Typography>
-          </Box>
-        </Box>
 
-        <Box className={classes.blockAddress}>
-          <Box className={classes.listIcon}>
-            <Button className="imageIon">
-              <img src={facebook} />
-            </Button>
-            <Button className="imageIon">
-              <img src={twitter} />
-            </Button>
-            <Button className="imageIon">
-              <img src={linkImg} />
-            </Button>
-            <Button className="imageIon">
-              <img src={youtobeImg} />
-            </Button>
-            <Button className="imageIon">
-              <img src={insta} />
-            </Button>
+          <Box className={classes.blockAddress}>
+            <Box className={classes.listIcon}>
+              <Button className="imageIon">
+                <img src={facebook} />
+              </Button>
+              <Button className="imageIon">
+                <img src={twitter} />
+              </Button>
+              <Button className="imageIon">
+                <img src={linkImg} />
+              </Button>
+              <Button className="imageIon">
+                <img src={youtobeImg} />
+              </Button>
+              <Button className="imageIon">
+                <img src={insta} />
+              </Button>
+            </Box>
+            <Typography className="textAddress">
+              © AltDesain Studio 2021 - All right reserved.
+            </Typography>
           </Box>
-          <Typography className="textAddress">
-            © AltDesain Studio 2021 - All right reserved.
-          </Typography>
         </Box>
       </Box>
-    </div>
+    </Box>
   );
 };
 
