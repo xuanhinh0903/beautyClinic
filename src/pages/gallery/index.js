@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .bgPlay": {
       backgroundImage: `url(${bgGallery})`,
-      backgroundSize: "100%",
+      backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       [theme.breakpoints.down(theme.xl)]: {
         backgroundSize: "auto 100%",
@@ -154,7 +154,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bgPlay: {
     backgroundImage: `url(${bgGallery})`,
-    backgroundSize: "100%",
+    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     [theme.breakpoints.down(theme.xl)]: {
       backgroundSize: "auto 100%",

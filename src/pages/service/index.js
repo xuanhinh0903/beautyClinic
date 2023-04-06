@@ -216,7 +216,7 @@ const useStyles = makeStyles((theme) => ({
     // margin: "0 auto",
     "& .bgPlay": {
       backgroundImage: `url(${servicePersion})`,
-      backgroundSize: "100%",
+      backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       [theme.breakpoints.down(theme.xl)]: {
         backgroundSize: "auto 100%",

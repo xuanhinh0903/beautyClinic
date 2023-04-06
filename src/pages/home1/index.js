@@ -296,7 +296,7 @@ const useStyles = makeStyles((theme) => ({
   listWrapService: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     padding: "0 0 134.4px",
     [theme.breakpoints.down(theme.xl)]: {
       padding: "0 34px 134.4px",
@@ -315,10 +315,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "0 0 147px",
     [theme.breakpoints.down(theme.xl)]: {
       padding: "0 34px 147px",
-    },
-    [theme.breakpoints.down(theme.lg)]: {
       display: "block",
       textAlign: "center",
+    },
+    [theme.breakpoints.down(theme.lg)]: {
       padding: "0 20px",
     },
   },
@@ -340,7 +340,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     maxWidth: "483px",
     paddingBottom: "49px",
-    [theme.breakpoints.down(theme.lg)]: {
+    [theme.breakpoints.down(theme.xl)]: {
       maxWidth: "initial",
     },
   },

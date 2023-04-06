@@ -59,8 +59,6 @@ const useStyles = makeStyles((theme) => ({
       padding: "0 20px",
     },
     padding: "0 150px",
-    maxWidth: "1440px",
-    margin: "0 auto",
   },
   advertise: {
     display: "flex",
@@ -104,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '2.25rem',
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -112,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "30px",
       color: "#8B8B8B",
       maxWidth: "310px",
@@ -173,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "12px",
   },
   imgPlay: {
-    padding: "50px 145px 0 0",
+    padding: "50px 0 0 0",
     height: "100%",
     cursor: "pointer",
     [theme.breakpoints.down(theme.xl)]: {
@@ -300,7 +298,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
@@ -309,7 +307,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '2.25rem',
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -317,7 +315,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
     },
@@ -331,7 +329,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
@@ -340,7 +338,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '2.25rem',
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -348,7 +346,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
     },
@@ -513,7 +511,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "125%",
       color: "#FF9ACB",
     },
@@ -557,7 +555,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     fontStyle: "italic",
     fontWeight: 400,
-    fontSize: '0.75rem',
+    fontSize: "0.75rem",
     lineHeight: "18px",
     letterSpacing: "0.1em",
     color: "#8B8B8B",
@@ -655,21 +653,23 @@ const Home2 = () => {
           <Box className={"wrapperHeader"}>
             <Box className={classes.wrapper1440}>
               <Box className={"wrapperHeaderChild"}></Box>
-              <Box className={classes.flexAbout}>
-                <Box className={classes.flexAboutChild}>
-                  <Typography className={classes.textAboutBold}>
-                    Your beauty center place
-                  </Typography>
-                  <Typography className={classes.textAboutBlur}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Commodo, massa pellentesque arcu fusce et magna consequat
-                    neque vitae lobortis.
-                  </Typography>
-                  <Button className={"moreDetail"} variant="text">
-                    More Details
-                  </Button>
+              <Box className={classes.wrap1440}>
+                <Box className={classes.flexAbout}>
+                  <Box className={classes.flexAboutChild}>
+                    <Typography className={classes.textAboutBold}>
+                      Your beauty center place
+                    </Typography>
+                    <Typography className={classes.textAboutBlur}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Commodo, massa pellentesque arcu fusce et magna consequat
+                      neque vitae lobortis.
+                    </Typography>
+                    <Button className={"moreDetail"} variant="text">
+                      More Details
+                    </Button>
+                  </Box>
+                  <img className={classes.imgPlay} src={playWhite} />
                 </Box>
-                <img className={classes.imgPlay} src={playWhite} />
               </Box>
             </Box>
           </Box>
@@ -678,27 +678,31 @@ const Home2 = () => {
 
       <Box className={"wrapperHeaders"}>
         <Box className={classes.wrapper}>
-          <Box className={classes.flex}>
-            <img className={classes.imgPlay} src={Illustration} />
-            <Box className={classes.flexsWithAbout}>
-              <Box className={classes.doubleButton}>
-                <Typography className={classes.textAbout}>About Us</Typography>
-                <Typography className={classes.textAboutBoldblue}>
-                  We are the best beauty clinic
-                </Typography>
-                <Typography className={classes.textAboutBlurGray}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
-                  libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius
-                  tellus in suspendisse placerat.
-                </Typography>
-                <Button
-                  className={"buttonPinkLearn"}
-                  sx={buttonPink}
-                  variant="text"
-                >
-                  Learn More
-                </Button>
+          <Box className={classes.wrap1440}>
+            <Box className={classes.flex}>
+              <img className={classes.imgPlay} src={Illustration} />
+              <Box className={classes.flexsWithAbout}>
+                <Box className={classes.doubleButton}>
+                  <Typography className={classes.textAbout}>
+                    About Us
+                  </Typography>
+                  <Typography className={classes.textAboutBoldblue}>
+                    We are the best beauty clinic
+                  </Typography>
+                  <Typography className={classes.textAboutBlurGray}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Elit, quam suscipit purus donec amet. Egestas volutpat
+                    facilisi eu libero. Nunc, ipsum ornare mauris sit quam quis
+                    enim. Varius tellus in suspendisse placerat.
+                  </Typography>
+                  <Button
+                    className={"buttonPinkLearn"}
+                    sx={buttonPink}
+                    variant="text"
+                  >
+                    Learn More
+                  </Button>
+                </Box>
               </Box>
             </Box>
           </Box>
@@ -716,48 +720,50 @@ const Home2 = () => {
       <Box id="all service">
         <Box className={classes.bgService}>
           <Box className={classes.wrapper}>
-            <Box className={classes.flexMainService}>
-              <Box className={classes.flexMainItem}>
-                <img className={"imgServiceItem"} src={icon2} />
-                <Typography className={"textServiceBold"}>
-                  Beauty consultation
-                </Typography>
-                <Typography className={"textServiceGray"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing.
-                </Typography>
-                <Box className="flexTextMore">
-                  <Typography className="textMore">Learn more</Typography>
-                  <img src={more} />
+            <Box className={classes.wrap1440}>
+              <Box className={classes.flexMainService}>
+                <Box className={classes.flexMainItem}>
+                  <img className={"imgServiceItem"} src={icon2} />
+                  <Typography className={"textServiceBold"}>
+                    Beauty consultation
+                  </Typography>
+                  <Typography className={"textServiceGray"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </Typography>
+                  <Box className="flexTextMore">
+                    <Typography className="textMore">Learn more</Typography>
+                    <img src={more} />
+                  </Box>
                 </Box>
-              </Box>
 
-              <Box
-                className={`${classes.flexMainItem} ${classes.flexMainItemDb}`}
-              >
-                <img className={"imgServiceItem"} src={icon3} />
-                <Typography className={"textServiceBold"}>
-                  Beauty consultation
-                </Typography>
-                <Typography className={"textServiceGray"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing.
-                </Typography>
-                <Box className="flexTextMore">
-                  <Typography className="textMore">Learn more</Typography>
-                  <img src={more} />
+                <Box
+                  className={`${classes.flexMainItem} ${classes.flexMainItemDb}`}
+                >
+                  <img className={"imgServiceItem"} src={icon3} />
+                  <Typography className={"textServiceBold"}>
+                    Beauty consultation
+                  </Typography>
+                  <Typography className={"textServiceGray"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </Typography>
+                  <Box className="flexTextMore">
+                    <Typography className="textMore">Learn more</Typography>
+                    <img src={more} />
+                  </Box>
                 </Box>
-              </Box>
 
-              <Box className={classes.flexMainItem}>
-                <img className={"imgServiceItem"} src={icon4} />
-                <Typography className={"textServiceBold"}>
-                  Beauty consultation
-                </Typography>
-                <Typography className={"textServiceGray"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing.
-                </Typography>
-                <Box className="flexTextMore">
-                  <Typography className="textMore">Learn more</Typography>
-                  <img src={more} />
+                <Box className={classes.flexMainItem}>
+                  <img className={"imgServiceItem"} src={icon4} />
+                  <Typography className={"textServiceBold"}>
+                    Beauty consultation
+                  </Typography>
+                  <Typography className={"textServiceGray"}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing.
+                  </Typography>
+                  <Box className="flexTextMore">
+                    <Typography className="textMore">Learn more</Typography>
+                    <img src={more} />
+                  </Box>
                 </Box>
               </Box>
             </Box>
@@ -766,69 +772,74 @@ const Home2 = () => {
           <Box id="wave right" className={classes.bgWaveRight}>
             <Box className={classes.Choosing} id="why choosing us ?">
               <Box className={classes.wrapper}>
-                <Box className={classes.advertise}>
-                  <Box>
-                    <Typography className={classes.textChoosingBold}>
-                      Why choosing us?
-                    </Typography>
-                    <Typography className={classes.textChoosingBlur}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                      aliquam, purus sit amet luctus venenatis.
-                    </Typography>
-                  </Box>
-                  <Box>
-                    <Box id="top" className={classes.advertiseChoosingTop}>
-                      <Box className={classes.infomation}>
-                        <img className={classes.imghandShake} src={handShake} />
-                        <Box className={classes.blockInfo}>
-                          <Typography className={classes.textChoosingBold}>
-                            100%
-                          </Typography>
-                          <Typography className={"textPink16"}>
-                            trusted clinic
-                          </Typography>
-                        </Box>
-                      </Box>
-
-                      <Box className={classes.infomation}>
-                        <img
-                          className={classes.imghandShake}
-                          src={brotherhood1}
-                        />
-                        <Box className={classes.blockInfo}>
-                          <Typography className={classes.textChoosingBold}>
-                            100%
-                          </Typography>
-                          <Typography className={"textPink16"}>
-                            trusted clinic
-                          </Typography>
-                        </Box>
-                      </Box>
+                <Box className={classes.wrap1440}>
+                  <Box className={classes.advertise}>
+                    <Box>
+                      <Typography className={classes.textChoosingBold}>
+                        Why choosing us?
+                      </Typography>
+                      <Typography className={classes.textChoosingBlur}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        ut aliquam, purus sit amet luctus venenatis.
+                      </Typography>
                     </Box>
-                    <Box
-                      id="bottom"
-                      className={classes.advertiseChoosingBottom}
-                    >
-                      <Box className={classes.infomation}>
-                        <img className={classes.imghandShake} src={earth1} />
-                        <Box className={classes.blockInfo}>
-                          <Typography className={classes.textChoosingBold}>
-                            100%
-                          </Typography>
-                          <Typography className={"textPink16"}>
-                            trusted clinic
-                          </Typography>
+                    <Box>
+                      <Box id="top" className={classes.advertiseChoosingTop}>
+                        <Box className={classes.infomation}>
+                          <img
+                            className={classes.imghandShake}
+                            src={handShake}
+                          />
+                          <Box className={classes.blockInfo}>
+                            <Typography className={classes.textChoosingBold}>
+                              100%
+                            </Typography>
+                            <Typography className={"textPink16"}>
+                              trusted clinic
+                            </Typography>
+                          </Box>
+                        </Box>
+
+                        <Box className={classes.infomation}>
+                          <img
+                            className={classes.imghandShake}
+                            src={brotherhood1}
+                          />
+                          <Box className={classes.blockInfo}>
+                            <Typography className={classes.textChoosingBold}>
+                              100%
+                            </Typography>
+                            <Typography className={"textPink16"}>
+                              trusted clinic
+                            </Typography>
+                          </Box>
                         </Box>
                       </Box>
-                      <Box className={classes.infomation}>
-                        <img className={classes.imghandShake} src={doctor1} />
-                        <Box className={classes.blockInfo}>
-                          <Typography className={classes.textChoosingBold}>
-                            100%
-                          </Typography>
-                          <Typography className={"textPink16"}>
-                            trusted clinic
-                          </Typography>
+                      <Box
+                        id="bottom"
+                        className={classes.advertiseChoosingBottom}
+                      >
+                        <Box className={classes.infomation}>
+                          <img className={classes.imghandShake} src={earth1} />
+                          <Box className={classes.blockInfo}>
+                            <Typography className={classes.textChoosingBold}>
+                              100%
+                            </Typography>
+                            <Typography className={"textPink16"}>
+                              trusted clinic
+                            </Typography>
+                          </Box>
+                        </Box>
+                        <Box className={classes.infomation}>
+                          <img className={classes.imghandShake} src={doctor1} />
+                          <Box className={classes.blockInfo}>
+                            <Typography className={classes.textChoosingBold}>
+                              100%
+                            </Typography>
+                            <Typography className={"textPink16"}>
+                              trusted clinic
+                            </Typography>
+                          </Box>
                         </Box>
                       </Box>
                     </Box>
@@ -845,85 +856,90 @@ const Home2 = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </Typography>
             </Box>
-
-            <Box className={classes.wrapper}>
-              <Box className={classes.flexMainConsultation}>
-                <Box className={classes.fexConsulation}>
-                  <img className={"imgServiceItem"} src={introduce1} />
-                  <Box className="padding38">
-                    <Typography className={"textServiceBold"}>
-                      How much does a consultation cost at our clinic?
-                    </Typography>
-                    <Typography className={"textServiceGray"}>
-                      A wonderful serenity has taken possession of my entire
-                      soul, like these sweet mornings ...
-                    </Typography>
-                    <Box className="flexTextMore">
-                      <Typography className="textMore">Learn more</Typography>
-                      <img src={more} />
+            <Box className={classes.wrap1440}>
+              <Box>
+                <Box className={classes.flexMainConsultation}>
+                  <Box className={classes.fexConsulation}>
+                    <img className={"imgServiceItem"} src={introduce1} />
+                    <Box className="padding38">
+                      <Typography className={"textServiceBold"}>
+                        How much does a consultation cost at our clinic?
+                      </Typography>
+                      <Typography className={"textServiceGray"}>
+                        A wonderful serenity has taken possession of my entire
+                        soul, like these sweet mornings ...
+                      </Typography>
+                      <Box className="flexTextMore">
+                        <Typography className="textMore">Learn more</Typography>
+                        <img src={more} />
+                      </Box>
                     </Box>
                   </Box>
-                </Box>
 
-                <Box className={`${classes.fexConsulation}`}>
-                  <img className={"imgServiceItem"} src={introduce2} />
-                  <Box className="padding38">
-                    <Typography className={"textServiceBold"}>
-                      Watch out! don't choose the wrong beauty product
-                    </Typography>
-                    <Typography className={"textServiceGray"}>
-                      A wonderful serenity has taken possession of my entire
-                      soul, like these sweet mornings ...
-                    </Typography>
-                    <Box className="flexTextMore">
-                      <Typography className="textMore">Learn more</Typography>
-                      <img src={more} />
+                  <Box className={`${classes.fexConsulation}`}>
+                    <img className={"imgServiceItem"} src={introduce2} />
+                    <Box className="padding38">
+                      <Typography className={"textServiceBold"}>
+                        Watch out! don't choose the wrong beauty product
+                      </Typography>
+                      <Typography className={"textServiceGray"}>
+                        A wonderful serenity has taken possession of my entire
+                        soul, like these sweet mornings ...
+                      </Typography>
+                      <Box className="flexTextMore">
+                        <Typography className="textMore">Learn more</Typography>
+                        <img src={more} />
+                      </Box>
                     </Box>
                   </Box>
-                </Box>
 
-                <Box className={classes.fexConsulation}>
-                  <img className={"imgServiceItem"} src={introduce3} />
-                  <Box className="padding38">
-                    <Typography className={"textServiceBold"}>
-                      About skin care you need to know
-                    </Typography>
-                    <Typography className={"textServiceGray"}>
-                      A wonderful serenity has taken possession of my entire
-                      soul, like these sweet mornings ...
-                    </Typography>
-                    <Box className="flexTextMore">
-                      <Typography className="textMore">Learn more</Typography>
-                      <img src={more} />
+                  <Box className={classes.fexConsulation}>
+                    <img className={"imgServiceItem"} src={introduce3} />
+                    <Box className="padding38">
+                      <Typography className={"textServiceBold"}>
+                        About skin care you need to know
+                      </Typography>
+                      <Typography className={"textServiceGray"}>
+                        A wonderful serenity has taken possession of my entire
+                        soul, like these sweet mornings ...
+                      </Typography>
+                      <Box className="flexTextMore">
+                        <Typography className="textMore">Learn more</Typography>
+                        <img src={more} />
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
               </Box>
-              <Box className={classes.flexRequest}>
-                <Box>
-                  <Typography className="textBlueBold">
-                    Request call services
-                  </Typography>
-                  <p className="textGrey">
-                    Lorem ipsum dolor sit amet, consect adipiscing elit{" "}
-                    <span className="contactBold">Contact Us.</span>
-                  </p>
-                </Box>
-                <Box>
-                  <Box id="hihi" className={classes.blockInsert}>
-                    <TextField
-                      id="outlined-basic"
-                      label="Insert your phone number here ..."
-                      variant="outlined"
-                      className="input"
-                    />
-                    <Button className="button">
-                      <img src={iconPhone} />
-                    </Button>
+            </Box>
+            <Box className={classes.wrapper}>
+              <Box className={classes.wrap1440}>
+                <Box className={classes.flexRequest}>
+                  <Box>
+                    <Typography className="textBlueBold">
+                      Request call services
+                    </Typography>
+                    <p className="textGrey">
+                      Lorem ipsum dolor sit amet, consect adipiscing elit{" "}
+                      <span className="contactBold">Contact Us.</span>
+                    </p>
                   </Box>
-                  <Typography className={classes.fontItalic}>
-                    Toll free for our coverage areas.
-                  </Typography>
+                  <Box>
+                    <Box id="hihi" className={classes.blockInsert}>
+                      <TextField
+                        id="outlined-basic"
+                        label="Insert your phone number here ..."
+                        variant="outlined"
+                        className="input"
+                      />
+                      <Button className="button">
+                        <img src={iconPhone} />
+                      </Button>
+                    </Box>
+                    <Typography className={classes.fontItalic}>
+                      Toll free for our coverage areas.
+                    </Typography>
+                  </Box>
                 </Box>
               </Box>
             </Box>
@@ -939,7 +955,7 @@ const Home2 = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <BlockNew handleClose={handleClose}  />
+        <BlockNew handleClose={handleClose} />
       </Dialog>
     </Box>
   );
