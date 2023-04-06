@@ -537,7 +537,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   Choosing: {
-    padding: "277px 0 350px 0",
+    padding: "277px 0 245px 0",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
     backgroundImage: `url(${bgChoosing})`,
