@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   wrap: {
     backgroundImage: `url(${bgBottom}) `,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "100%",
+    backgroundSize: "auto 50%",
     backgroundPosition: " 0 100%",
     [theme.breakpoints.down(theme.xl)]: {
       backgroundSize: "auto 60%",
@@ -35,8 +35,9 @@ const useStyles = makeStyles((theme) => ({
     },
     backgroundImage: `url(${bgTop})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "100%",
-    padding: "237px 150px 0",
+    backgroundSize: "100% auto",
+    padding: "150px 150px 20px",
+    // backgroundPosition: "inherit",
     "& .textLogo": {
       fontSize: "1.5rem",
       fontWeight: "700",

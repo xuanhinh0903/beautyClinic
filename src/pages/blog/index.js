@@ -181,7 +181,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "76px",
     [theme.breakpoints.down(theme.xl)]: {
       width: "100%",
-      marginBottom: "20px",
+      marginBottom: "40px",
     },
     "& .button": {
       position: "absolute",
@@ -242,7 +242,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "20px",
     },
     [theme.breakpoints.down(theme.xl)]: {
-      marginBottom: "20px",
+      marginBottom: "40px",
     },
     "& .listSocial": {
       display: "flex",
@@ -501,10 +501,7 @@ const Blog = () => {
                 </Button>
               </Box>
 
-              <Box
-                id="all"
-                className={`${classes.wrapAll30} `}
-              >
+              <Box id="all" className={`${classes.wrapAll30} `}>
                 <Box className={`${classes.blockwrap30} ${classes.hei100}`}>
                   <Typography className={"textBold"}>Recent Posts</Typography>
                   <Box className={"wrapInfo"}>
