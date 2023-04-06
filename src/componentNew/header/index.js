@@ -242,15 +242,15 @@ const Header = (props) => {
                   </Typography>
                 </Box>
               </Box>
-              <Button
-                className={classes.ButtonContact}
-                sx={buttonPink}
-                variant="text"
-              >
-                <Link className="linkText" to={"/contact"}>
+              <Link className="linkText" to={"/contact"}>
+                <Button
+                  className={classes.ButtonContact}
+                  sx={buttonPink}
+                  variant="text"
+                >
                   Contact
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </Box>
             <Box onClick={handleClick} className={classes.optionBars}>
               <Button
