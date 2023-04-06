@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
       maxWidth: "360px",
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
       "& .textPink16": {
         fontFamily: "Poppins",
         fontWeight: "600",
-        fontSize: 16,
+        fontSize: "1rem",
         lineHeight: "125%",
         color: "#FF64AE",
         paddingBottom: "12px",
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
       "& .textBlueBold": {
         fontFamily: "Poppins",
         fontWeight: "600",
-        fontSize: 36,
+        fontSize: "2.25rem",
         lineHeight: "125%",
         color: "#091156",
         maxWidth: "450px",
@@ -109,7 +109,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 16,
+      fontSize: "1rem",
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
@@ -118,7 +118,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 36,
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -126,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
     },
@@ -219,7 +219,7 @@ const Contact = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <BlockNew />
+        <BlockNew handleClose={handleClose} />
       </Dialog>
 
       {offset > 0 && <Scroll />}

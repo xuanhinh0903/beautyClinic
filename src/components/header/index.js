@@ -8,6 +8,7 @@ import dotSmall from "../../images/logoBlue/Ellipse White 2.svg";
 import recTangBlue from "../../images/logoBlue/Rectangle Blue.svg";
 import { makeStyles } from "@material-ui/core";
 import DehazeIcon from "@mui/icons-material/Dehaze";
+import ClearIcon from "@mui/icons-material/Clear";
 import styles from "./style.module.css";
 import { Link } from "react-router-dom";
 
@@ -29,6 +30,11 @@ const buttonPink = {
 const useStyles = makeStyles((theme) => ({
   optionBars: {
     display: "none",
+    "& .check": {
+      "& svg": {
+        fontSize: "2.25rem",
+      },
+    },
     [theme.breakpoints.down(theme.xl)]: {
       display: "flex",
     },
@@ -47,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
   optionSelect: {
     "& .check": {
       fontWeight: "500",
-      fontSize: "16px",
+      fontSize: "1rem",
       lineHeight: "24px",
       letterSpacing: "0.1em",
       color: "#8B8B8B",
@@ -56,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
       "& .link": {
         textDecoration: "none",
         fontWeight: "500",
-        fontSize: "16px",
+        fontSize: "1rem",
         lineHeight: "24px",
         letterSpacing: "0.1em",
         color: "#8B8B8B",
@@ -68,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "none",
         fontFamily: "Poppins",
         fontWeight: "600",
-        fontSize: "16px",
+        fontSize: "1rem",
         lineHeight: "24px",
         letterSpacing: "0.1em",
         color: "#414880",
@@ -84,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: "none",
         fontFamily: "Poppins",
         fontWeight: "600",
-        fontSize: "16px",
+        fontSize: "1rem",
         lineHeight: "24px",
         letterSpacing: "0.1em",
         color: "#414880",
@@ -100,6 +106,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.down(theme.xl)]: {
       flexDirection: "row-reverse",
+      justifyContent: "flex-end",
     },
     "& .textHeader": {
       textDecoration: "none",
@@ -109,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "space-between",
         cursor: "pointer",
         "& .textLogo": {
-          fontSize: "24px",
+          fontSize: "1.5rem",
           fontWeight: "700",
           lineHeight: "36.8px ",
           letterSpacing: "0.1em",
@@ -255,14 +262,18 @@ const Header = (props) => {
                 className={"check"}
                 sx={{
                   ":hover": {
-                    bgcolor: "#050b37",
+                    bgcolor: "#fafafa00",
                   },
                   width: "50px",
                   height: "50px",
-                  backgroundColor: "#091156",
+                  backgroundColor: "#fafafa00",
+                  color: "#091156",
+                  boxShadow: "none",
+                  marginRight: "12px",
                 }}
               >
                 <DehazeIcon />
+                {/* <ClearIcon /> */}
               </Button>
             </Box>
           </Box>

@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 16,
+      fontSize: "1rem",
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 36,
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
     },
@@ -174,7 +174,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textAboutBoldblueClient": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: "36px",
+      fontSize: "2.25rem",
       lineHeight: "110%",
       color: "#091156",
       paddingBottom: "24px",
@@ -189,22 +189,17 @@ const useStyles = makeStyles((theme) => ({
     "& .textAboutBlurGray": {
       fontFamily: "Poppins",
       fontWeight: 400,
-      fontSize: "16px",
+      fontSize: "1rem",
       lineHeight: "24px",
       letterSpacing: "0.1em",
       color: "#8B8B8B",
       paddingBottom: "9px",
-      // [theme.breakpoints.down(theme.xl)]: {
-      //   maxWidth: "inherit",
-      //   textAlign: "center",
-      //   paddingBottom: "0",
-      // },
     },
     "& .flexTextMore": {
       display: "flex",
       "& .textMore": {
         color: "#091156",
-        fontSize: "16px",
+        fontSize: "1rem",
         fontFamily: "Poppins",
         fontWeight: "600",
         paddingRight: "15px",
@@ -236,7 +231,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Poppins",
         color: "#091156",
         fontWeight: 600,
-        fontSize: "36px",
+        fontSize: "2.25rem",
         lineHeight: "125%",
         paddingBottom: "21px",
       },
@@ -284,7 +279,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       color: "#FFFFFF",
       fontWeight: 600,
-      fontSize: "48px",
+      fontSize: "3rem",
       lineHeight: "125%",
       maxWidth: "520px",
       paddingBottom: "10px",
@@ -295,7 +290,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textAboutBlur": {
       fontFamily: "Poppins",
       fontWeight: 400,
-      fontSize: "16px",
+      fontSize: "1rem",
       lineHeight: "27px",
       letterSpacing: "0.1em",
       color: " #D8DCFF",
@@ -330,7 +325,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       color: "#FFFFFF",
       fontWeight: 600,
-      fontSize: "16px",
+      fontSize: "1rem",
       lineHeight: "24px",
       letterSpacing: "0.1em",
     },
@@ -357,7 +352,7 @@ const useStyles = makeStyles((theme) => ({
       "& .wrapSelectChildren": {
         "& .textQuestion": {
           fontWeight: "600",
-          fontSize: "16px",
+          fontSize: "1rem",
           color: "#091156",
           [theme.breakpoints.down(theme.sm)]: {
             maxWidth: "80%",
@@ -372,7 +367,7 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: "italic",
     color: "#8B8B8B",
     fontWeight: "400",
-    fontSize: "14px",
+    fontSize: "0.875rem",
     borderRadius: "0px 0px 20px 20px",
     borderTop: "1px solid #091156",
     [theme.breakpoints.down(theme.sm)]: {
@@ -565,7 +560,7 @@ const Service = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <BlockNew />
+        <BlockNew handleClose={handleClose} />
       </Dialog>
       <Box className={classes.wrapper}>
         <Box className={classes.wrap1440}>

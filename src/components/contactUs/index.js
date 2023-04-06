@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 36,
+      fontSize: '2.25rem',
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: '1rem',
       lineHeight: "24px",
       color: "#8B8B8B",
       paddingBottom: "44px",
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
       background: "#FFFFFF",
       border: " 1px solid #D9DDFE",
       borderRadius: "15px",
-      fontSize: "16px",
+      fontSize: "1rem",
       outline: "none",
       "&::placeholder": {
         color: "#C5C5C5",
@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     "& .inputChild": {
       marginBottom: "38.32px",
       background: "#FFFFFF",
-      fontSize: "16px ",
+      fontSize: "1rem ",
       borderRadius: "15px",
       color: "#C5C5C5",
       "& label": {
@@ -150,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
     "& .inputEmail": {
       marginBottom: "38.32px",
       background: "#FFFFFF",
-      fontSize: "16px ",
+      fontSize: "1rem",
       borderRadius: "15px",
       color: "#C5C5C5",
       "& label": {

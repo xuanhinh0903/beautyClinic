@@ -55,17 +55,17 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-between",
     padding: "121px 0 107px 0",
-    marginTop: "36px",
+    marginTop: "2.25rem",
     marginBottom: "108px",
     "& .textBold": {
-      fontSize: "36px",
+      fontSize: "2.25rem",
       fontWeight: "600",
       fontFamily: "Poppins",
       lineHeight: "125%",
       color: "#FFFFFF",
     },
     "& .textGrey": {
-      fontSize: "16px",
+      fontSize: "1rem",
       fontWeight: "500",
       fontFamily: "Poppins",
       lineHeight: "24px",
@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Poppins",
         color: "#091156",
         fontWeight: 600,
-        fontSize: "36px",
+        fontSize: "2.25rem",
         lineHeight: "125%",
         maxWidth: "600px",
         [theme.breakpoints.down(theme.xl)]: {
@@ -148,6 +148,7 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: "Poppins",
         maxWidth: "592px",
         paddingBottom: "12px",
+        fontSize: "1rem",
         [theme.breakpoints.down(theme.xl)]: {
           paddingBottom: "20px",
           maxWidth: "inherit",
@@ -210,7 +211,7 @@ const useStyles = makeStyles((theme) => ({
       "& label": {
         color: "8B8B8B",
         fontFamily: "Poppins",
-        fontSize: "16px",
+        fontSize: "1rem",
       },
       "& fieldset": {
         border: "1px solid #D9DDFE",
@@ -229,7 +230,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
     boxShadow: "-2px 4px 31px 9px #F2F4FF",
     borderRadius: "25px",
-    padding: "58px 49px 65px 49px",
+    padding: "58px 30px 65px 49px",
     marginBottom: "83px",
     cursor: "pointer",
     [theme.breakpoints.down(theme.sm)]: {
@@ -259,7 +260,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       color: "#091156",
       fontWeight: 600,
-      fontSize: "16px",
+      fontSize: "1rem",
       lineHeight: "125%",
       paddingBottom: "30px",
       [theme.breakpoints.down(theme.sm)]: {
@@ -280,7 +281,7 @@ const useStyles = makeStyles((theme) => ({
         height: "26px",
         fontFamily: "Poppins",
         fontWeight: 400,
-        fontSize: "14px",
+        fontSize: "0.875rem",
         lineHeight: "21px",
         textAlign: "center",
         letterSpacing: "0.1em",
@@ -297,7 +298,7 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       color: "#091156",
       fontWeight: 600,
-      fontSize: "16px",
+      fontSize: "1rem",
       lineHeight: "125%",
       paddingBottom: "22px",
       [theme.breakpoints.down(theme.sm)]: {
@@ -309,7 +310,7 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: "0.1em",
       color: "#8B8B8B",
       fontFamily: "Poppins",
-      fontSize: "14px",
+      fontSize: "0.875rem",
       lineHeight: "20px",
       paddingBottom: "3px",
       [theme.breakpoints.down(theme.sm)]: {
@@ -332,7 +333,7 @@ const useStyles = makeStyles((theme) => ({
           fontWeight: 600,
           fontFamily: "Poppins",
           lineHeight: "21px",
-          fontSize: "14px",
+          fontSize: "0.875rem",
           paddingBottom: "5px",
         },
         "& .textGrey": {
@@ -341,7 +342,7 @@ const useStyles = makeStyles((theme) => ({
           color: "#8B8B8B",
           fontFamily: "Poppins",
           maxWidth: "160px",
-          fontSize: "12px",
+          fontSize: "0.75rem",
           lineHeight: "18px",
         },
       },
@@ -624,7 +625,7 @@ const Blog = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <BlockNew />
+        <BlockNew handleClose={handleClose} />
       </Dialog>
 
       {offset > 0 && <Scroll />}

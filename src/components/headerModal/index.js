@@ -8,10 +8,14 @@ import dotSmall from "../../images/logoBlue/Ellipse White 2.svg";
 import recTangBlue from "../../images/logoBlue/Rectangle Blue.svg";
 import { makeStyles } from "@material-ui/core";
 import DehazeIcon from "@mui/icons-material/Dehaze";
+import ClearIcon from "@mui/icons-material/Clear";
 import styles from "./style.module.css";
 import { Link } from "react-router-dom";
 
 const buttonPink = {
+  ":hover": {
+    bgcolor: "#f52e8d",
+  },
   padding: 0,
   display: "inline-block",
   width: "161.6px",
@@ -21,9 +25,6 @@ const buttonPink = {
   marginLeft: "53.19px",
   borderRadius: "50px",
   fontFamily: "Poppins !important",
-  "&:hover": {
-    bgcolor: "#f52e8d",
-  },
 };
 
 const useStyles = makeStyles((theme) => ({
@@ -52,19 +53,22 @@ const useStyles = makeStyles((theme) => ({
   optionSelect: {
     "& .check": {
       fontWeight: "500",
-      fontSize: "1rem",
+      fontSize: "1.5rem",
       lineHeight: "24px",
       letterSpacing: "0.1em",
       color: "#8B8B8B",
       margin: "0 0 0 48.07px",
       cursor: "pointer",
+      "& svg": {
+        fontSize: "2.25rem",
+      },
       "& .link": {
         textDecoration: "none",
         fontWeight: "500",
         fontSize: "1rem",
         lineHeight: "24px",
         letterSpacing: "0.1em",
-        color: "#D8DCFF",
+        color: "#8B8B8B",
         cursor: "pointer",
         textTransform: "capitalize",
         fontFamily: "Poppins",
@@ -76,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "1rem",
         lineHeight: "24px",
         letterSpacing: "0.1em",
-        color: "#FFFFFF",
+        color: "#414880",
         fontFamily: "Poppins",
         margin: "0",
       },
@@ -119,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
           fontWeight: "700",
           lineHeight: "36.8px ",
           letterSpacing: "0.1em",
-          color: "#FFFFFF",
+          color: "#091156",
           fontFamily: "Poppins",
         },
       },
@@ -130,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     zIndex: "99",
     top: "0",
-    backgroundColor: "#44486ef7",
+    backgroundColor: "#e6e9ff",
     boxShadow: "0 3px 5px rgba(57, 63, 72, 0.3)",
     padding: "10px 150px 0",
 
@@ -159,9 +163,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.lg)]: {
       padding: "40px 20px",
     },
-    "& .padding150": {
-      // padding: "0 150px 0",
-    },
   },
   wrapWidth: {
     maxWidth: "1440px",
@@ -175,9 +176,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Header = (props) => {
+const HeaderModal = (props) => {
   const handleClick = () => {
-    props.handleClick();
+    props.handleClose();
   };
   const [offset, setOffset] = React.useState(0);
   const classes = useStyles();
@@ -274,7 +275,8 @@ const Header = (props) => {
                   marginRight: "12px",
                 }}
               >
-                <DehazeIcon />
+                {/* <DehazeIcon /> */}
+                <ClearIcon />
               </Button>
             </Box>
           </Box>
@@ -284,4 +286,4 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+export default HeaderModal;

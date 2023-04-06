@@ -33,7 +33,7 @@ import Scroll from "../../components/scroll";
 const textBoldBlue = {
   fontFamily: "Poppins",
   fontWeight: 600,
-  fontSize: "48px",
+  fontSize: "3rem",
   lineHeight: "125%",
   color: "#091156",
   marginTop: "82px",
@@ -44,7 +44,7 @@ const textBoldBlue = {
 const textSmallBlue = {
   fontFamily: "Poppins",
   fontWeight: 500,
-  fontSize: "16px",
+  fontSize: "1rem",
   lineHeight: "24px",
   color: "#091156",
   letterSpacing: "0.1em",
@@ -64,7 +64,7 @@ const textMainServiceBold = {
   fontFamily: "Poppins",
   color: "#091156",
   fontWeight: 600,
-  fontSize: "36px",
+  fontSize: "2.25rem",
   maxWidth: "450px",
   margin: "0 auto",
   paddingBottom: "22px",
@@ -75,7 +75,7 @@ const textAboutBold = {
   fontFamily: "Poppins",
   color: "#091156",
   fontWeight: 600,
-  fontSize: "36px",
+  fontSize: "2.25rem",
   margin: "0 auto",
   paddingBottom: "22px",
   lineHeight: "1.3",
@@ -159,7 +159,7 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapTextBig: {
     [theme.breakpoints.down(theme.xs)]: {
-      fontSize: "39px !important",
+      fontSize: "2.4375rem !important",
       marginTop: "0 !important",
     },
   },
@@ -185,7 +185,7 @@ const useStyles = makeStyles((theme) => ({
   fixPaddingHead: {
     backgroundImage: `url(${bgimagehehe})`,
     backgroundRepeat: "no-repeat",
-    paddingBottom: "100px !important",
+    paddingBottom: "200px !important",
     // padding: "0 150px 152px",
     [theme.breakpoints.down(theme.xl)]: {
       // padding: "0 34px 152px",
@@ -254,15 +254,15 @@ const useStyles = makeStyles((theme) => ({
   textBold18: {
     fontWeight: 600,
     fontFamily: "Poppins",
-    fontSize: "18px",
+    fontSize: "1.125rem",
     lineHeight: "37px",
     color: "#091156",
     [theme.breakpoints.down(theme.sm)]: {
-      fontSize: "30px",
+      fontSize: "1.875rem",
       padding: "0 20px 25px",
     },
     [theme.breakpoints.down(theme.xs)]: {
-      fontSize: "18px",
+      fontSize: "1.125rem",
     },
   },
   textGreyService: {
@@ -277,7 +277,7 @@ const useStyles = makeStyles((theme) => ({
   textGrey14: {
     fontFamily: "Poppins",
     fontWeight: 400,
-    fontSize: "14px",
+    fontSize: "0.875rem",
     lineHeight: "21px",
     letterSpacing: " 0.1em",
     color: " #8B8B8B",
@@ -440,7 +440,7 @@ const Home1 = () => {
     >
       <Box id="top" className={classes.fixPaddingHead}>
         <Box className={classes.fixPaddingHeader}>
-          <Header handleClick={handleClickOpen} />
+          <Header open={open} handleClick={handleClickOpen} />
         </Box>
         <Box className={classes.wrapper}>
           <Box className={classes.wrap1440}>
@@ -626,7 +626,7 @@ const Home1 = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <BlockNew />
+        <BlockNew handleClose={handleClose} />
       </Dialog>
     </Box>
   );

@@ -34,21 +34,21 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textPink: {
-    fontSize: "16px",
+    fontSize: "1rem",
     fontWeight: "600",
     lineHeight: "125%",
     color: "#FF64AE",
     fontFamily: "Poppins",
     paddingBottom: "15px",
     [theme.breakpoints.down(theme.xl)]: {
-      fontSize: "20px",
+      fontSize: "1.25rem",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      fontSize: "16px",
+      fontSize: "1rem",
     },
   },
   textBold: {
-    fontSize: "18px",
+    fontSize: "1.125rem",
     fontWeight: "600",
     lineHeight: "173%",
     color: "#091156",
@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   textgray: {
-    fontSize: "14px",
+    fontSize: "0.875rem",
     fontWeight: "400",
     lineHeight: "21px",
     color: "#8B8B8B",
@@ -74,12 +74,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.xl)]: {
       maxWidth: "initial",
       padding: "0 20px 30px",
-      fontSize: "18px",
+      fontSize: "1.125rem",
     },
     [theme.breakpoints.down(theme.sm)]: {
       maxWidth: "initial",
       padding: "0 20px 30px",
-      fontSize: "16px",
+      fontSize: "1rem",
     },
   },
   blockCenter: {

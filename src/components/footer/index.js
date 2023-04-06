@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "100%",
     padding: "237px 150px 0",
     "& .textLogo": {
-      fontSize: "24px",
+      fontSize: "1.5rem",
       fontWeight: "700",
       lineHeight: "36.8px ",
       letterSpacing: "0.1em",
@@ -89,17 +89,17 @@ const useStyles = makeStyles((theme) => ({
       },
 
       "& .textBold": {
-        fontSize: "16px",
+        fontSize: "1rem",
         fontWeight: "700",
         margin: "0",
         "& .textBlur": {
-          fontSize: "14px",
+          fontSize: "0.875rem",
           fontWeight: "500",
         },
       },
     },
     "& .wrapItalicized, & .italicized": {
-      fontSize: "14px",
+      fontSize: "0.875rem",
       fontWeight: "500",
       lineHeight: "24px ",
       letterSpacing: "0.1em",
@@ -134,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
       "text-align": "center",
     },
     "& .textBoldWhite": {
-      fontSize: "18px",
+      fontSize: "1.125rem",
       fontWeight: "600",
       lineHeight: "27px ",
       letterSpacing: "0.1em",
@@ -146,7 +146,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "0 12.66px 0 4.07px",
     },
     "& .textSmall": {
-      fontSize: "18px",
+      fontSize: "1.125rem",
       fontWeight: "400",
       lineHeight: "24px ",
       letterSpacing: "0.1em",
@@ -163,7 +163,7 @@ const useStyles = makeStyles((theme) => ({
       display: "block",
     },
     "& .textAddress": {
-      fontSize: "16px",
+      fontSize: "1rem",
       fontWeight: "400",
       lineHeight: "24px ",
       letterSpacing: "0.1em",

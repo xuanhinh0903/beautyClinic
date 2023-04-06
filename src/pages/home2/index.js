@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 36,
+      fontSize: '2.25rem',
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: '1rem',
       lineHeight: "30px",
       color: "#8B8B8B",
       maxWidth: "310px",
@@ -141,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     color: "#FFFFFF",
     fontWeight: 600,
-    fontSize: "48px",
+    fontSize: "3rem",
     lineHeight: "125%",
     maxWidth: "520px",
     paddingBottom: "10px",
@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     color: "#FFFFFF",
     fontWeight: 600,
-    fontSize: "36px",
+    fontSize: "2.25rem",
     lineHeight: "125%",
     maxWidth: "520px",
     [theme.breakpoints.down(theme.xl)]: {
@@ -202,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
   textAboutBlur: {
     fontFamily: "Poppins",
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: "1rem",
     lineHeight: "27px",
     letterSpacing: "0.1em",
     color: " #D8DCFF",
@@ -215,7 +215,7 @@ const useStyles = makeStyles((theme) => ({
   textChoosingBlur: {
     fontFamily: "Poppins",
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: "1rem",
     lineHeight: "27px",
     letterSpacing: "0.1em",
     color: " #D8DCFF",
@@ -228,7 +228,7 @@ const useStyles = makeStyles((theme) => ({
   textAboutBlurGray: {
     fontFamily: "Poppins",
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: "1rem",
     lineHeight: "27px",
     letterSpacing: "0.1em",
     color: "#8B8B8B",
@@ -242,7 +242,7 @@ const useStyles = makeStyles((theme) => ({
   textAboutBoldblue: {
     fontFamily: "Poppins",
     fontWeight: 600,
-    fontSize: "48px",
+    fontSize: "3rem",
     lineHeight: "125%",
     maxWidth: "590px",
     paddingBottom: "10px",
@@ -279,7 +279,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "15px",
       backgroundColor: "#ffffff00",
       color: "#FFFFFF",
-      fontSize: "16px",
+      fontSize: "1rem",
       fontFamily: "Poppins !important",
       fontWeight: "600",
       textTransform: "none !important",
@@ -300,7 +300,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 16,
+      fontSize: '1rem',
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
@@ -309,7 +309,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 36,
+      fontSize: '2.25rem',
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -317,7 +317,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: '1rem',
       lineHeight: "24px",
       color: "#8B8B8B",
     },
@@ -331,7 +331,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 16,
+      fontSize: '1rem',
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
@@ -340,7 +340,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 36,
+      fontSize: '2.25rem',
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -348,7 +348,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: '1rem',
       lineHeight: "24px",
       color: "#8B8B8B",
     },
@@ -395,14 +395,14 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .textServiceBold": {
       color: "#091156",
-      fontSize: "18px",
+      fontSize: "1.125rem",
       fontFamily: "Poppins !important",
       fontWeight: "600",
       lineHeight: "37px",
     },
     "& .textServiceGray": {
       color: "#8B8B8B",
-      fontSize: "14px",
+      fontSize: "0.875rem",
       fontFamily: "Poppins !important",
       fontWeight: "400",
       maxWidth: "189px",
@@ -415,7 +415,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       "& .textMore": {
         color: "#FF64AE",
-        fontSize: "14px",
+        fontSize: "0.875rem",
         fontFamily: "Poppins !important",
         fontWeight: "600",
         paddingRight: "2px",
@@ -437,7 +437,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .textServiceBold": {
       color: "#091156",
-      fontSize: "18px",
+      fontSize: "1.125rem",
       fontFamily: "Poppins !important",
       fontWeight: "600",
       lineHeight: "29px",
@@ -449,7 +449,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .textServiceGray": {
       color: "#8B8B8B",
-      fontSize: "14px",
+      fontSize: "0.875rem",
       fontFamily: "Poppins !important",
       fontWeight: "400",
       maxWidth: "220px",
@@ -466,7 +466,7 @@ const useStyles = makeStyles((theme) => ({
       },
       "& .textMore": {
         color: "#FF64AE",
-        fontSize: "14px",
+        fontSize: "0.875rem",
         fontFamily: "Poppins !important",
         fontWeight: "600",
         paddingRight: "2px",
@@ -513,7 +513,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 16,
+      fontSize: '1rem',
       lineHeight: "125%",
       color: "#FF9ACB",
     },
@@ -557,7 +557,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     fontStyle: "italic",
     fontWeight: 400,
-    fontSize: 12,
+    fontSize: '0.75rem',
     lineHeight: "18px",
     letterSpacing: "0.1em",
     color: "#8B8B8B",
@@ -599,7 +599,7 @@ const useStyles = makeStyles((theme) => ({
       "& label": {
         color: "#C5C5C5",
         fontFamily: "Poppins",
-        fontSize: "16px",
+        fontSize: "1rem",
       },
       "& fieldset": {
         border: "1px solid #D9DDFE",
@@ -939,7 +939,7 @@ const Home2 = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <BlockNew />
+        <BlockNew handleClose={handleClose}  />
       </Dialog>
     </Box>
   );

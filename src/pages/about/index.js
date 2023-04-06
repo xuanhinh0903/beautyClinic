@@ -15,7 +15,7 @@ import iconLogo2 from "../../images/iconLogo/LOGO2.svg";
 import iconLogo3 from "../../images/iconLogo/LOGO3.svg";
 import iconLogo4 from "../../images/iconLogo/LOGO4.svg";
 import iconLogo5 from "../../images/iconLogo/LOGO5.svg";
-import BubbleBGFooter from "../../images/background/BubbleBGFooter.svg";
+import BubbleBGFooter from "../../images/background/bgAb.svg";
 import Footer from "../../components/footer";
 import Scroll from "../../components/scroll";
 import BlockNew from "../../components/blockNew";
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     lineHeight: "125%",
     paddingBottom: "12px",
-    // maxWidth: "60%",
+    fontSize: "1rem",
     [theme.breakpoints.down(theme.xl)]: {
       textAlign: "center",
     },
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   textAboutBoldblue: {
     fontFamily: "Poppins",
     fontWeight: 600,
-    fontSize: "36px",
+    fontSize: "2.25rem",
     lineHeight: "118%",
     maxWidth: "60%",
     paddingBottom: "12px",
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   textAboutBlurGray: {
     fontFamily: "Poppins",
     fontWeight: 400,
-    fontSize: "16px",
+    fontSize: "1rem",
     lineHeight: "24px",
     letterSpacing: "0.1em",
     color: "#8B8B8B",
@@ -124,7 +124,7 @@ const useStyles = makeStyles((theme) => ({
   textSlogan: {
     fontFamily: "Poppins",
     fontWeight: 600,
-    fontSize: "16px",
+    fontSize: "1rem",
     lineHeight: "125%",
     letterSpacing: "0.1em",
     color: "#ABB4FF",
@@ -132,7 +132,7 @@ const useStyles = makeStyles((theme) => ({
   textSloganBold: {
     fontFamily: "Poppins",
     fontWeight: 600,
-    fontSize: "36px",
+    fontSize: "2.25rem",
     lineHeight: "125%",
     letterSpacing: "0.1em",
     color: "#FFFFFF",
@@ -147,7 +147,7 @@ const useStyles = makeStyles((theme) => ({
   textAboutBoldblueClient: {
     fontFamily: "Poppins",
     fontWeight: "600",
-    fontSize: 36,
+    fontSize: "2.25rem",
     lineHeight: "125%",
     color: "#091156",
     paddingBottom: "24px",
@@ -155,7 +155,7 @@ const useStyles = makeStyles((theme) => ({
   textSloganGrey: {
     fontFamily: "Poppins",
     fontWeight: 600,
-    fontSize: "16px",
+    fontSize: "1rem",
     lineHeight: "125%",
     letterSpacing: "0.1em",
     color: "#CACACA",
@@ -250,7 +250,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 16,
+      fontSize: "1rem",
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
@@ -259,7 +259,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: 36,
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -267,7 +267,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
     },
@@ -295,6 +295,10 @@ const useStyles = makeStyles((theme) => ({
   bgBubbleBGFooter: {
     backgroundImage: `url(${BubbleBGFooter})`,
     backgroundRepeat: "no-repeat",
+    backgroundSize: "100%",
+    [theme.breakpoints.down(theme.xl)]: {
+      backgroundSize: "auto",
+    },
   },
   wrap1440: {
     maxWidth: "1440px",
@@ -467,7 +471,7 @@ const About = () => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <BlockNew />
+        <BlockNew handleClose={handleClose} />
       </Dialog>
 
       {offset > 0 && <Scroll />}
