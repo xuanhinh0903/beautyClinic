@@ -16,7 +16,8 @@ const themes = createTheme({
       sm: 800,
       md: 900,
       lg: 1010,
-      xl: 1286,
+      xl: 1410,
+      msx: 1400,
     },
   },
 });
@@ -27,6 +28,7 @@ const theme = createMuiTheme({
   md: themes.breakpoints.values.md,
   sm: themes.breakpoints.values.sm,
   xs: themes.breakpoints.values.xs,
+  msx: themes.breakpoints.values.msx,
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

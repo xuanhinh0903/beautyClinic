@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     marginBottom: "157.64px",
+    
     [theme.breakpoints.down(theme.xl)]: {
       display: "block",
       textAlign: "center",
@@ -856,8 +857,8 @@ const Home2 = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </Typography>
             </Box>
-            <Box className={classes.wrap1440}>
-              <Box>
+            <Box className={classes.wrapper}>
+              <Box className={classes.wrap1440}>
                 <Box className={classes.flexMainConsultation}>
                   <Box className={classes.fexConsulation}>
                     <img className={"imgServiceItem"} src={introduce1} />
