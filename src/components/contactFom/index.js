@@ -6,6 +6,9 @@ import imageBG3 from "../../images/imgProfess/imagepersion3.svg";
 import imageIcon1 from "../../images/imgProfess/icon/Twitter.svg";
 import imageIcon2 from "../../images/imgProfess/icon/Instagram.svg";
 import imageIcon3 from "../../images/imgProfess/icon/Instagram.svg";
+import locate from "../../images/contact/locate.svg";
+import mail from "../../images/contact/mail.svg";
+import phone from "../../images/contact/phone.svg";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -98,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
   },
 }));
-const InfoProfess = () => {
+const ContactForm = () => {
   const classes = useStyles();
 
   return (
@@ -106,52 +109,39 @@ const InfoProfess = () => {
       <Box className={classes.wrapper}>
         {/* số lượng */}
         <Box className={classes.blockCenter}>
-          <img className={classes.imgDouble} src={imageBG1} />
-          <Typography className={classes.textPink}>Surgeon</Typography>
-          <Typography className={classes.textBold}>Briyan Nevalli</Typography>
+          <img className={classes.imgDouble} src={locate} />
+          <Typography className={classes.textPink}>Address</Typography>
+          <Typography className={classes.textBold}>
+            101 Baker Street, NY
+          </Typography>
           <Typography className={classes.textgray}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
             purus sit
           </Typography>
-          <Box>
-            <img src={imageIcon1} />
-            <img src={imageIcon2} />
-            <img src={imageIcon3} />
-          </Box>
         </Box>
 
         <Box className={`${classes.blockCenter} ${classes.blockMid}`}>
-          <img className={classes.imgOne} src={imageBG2} />
-          <Typography className={classes.textPink}>Dermatologist</Typography>
-          <Typography className={classes.textBold}>Bella sebastian</Typography>
+          <img className={classes.imgOne} src={phone} />
+          <Typography className={classes.textPink}>Phone</Typography>
+          <Typography className={classes.textBold}>+896 120 5889</Typography>
           <Typography className={classes.textgray}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
             purus sit
           </Typography>
-          <Box>
-            <img src={imageIcon1} />
-            <img src={imageIcon2} />
-            <img src={imageIcon3} />
-          </Box>
         </Box>
 
         <Box className={classes.blockCenter}>
-          <img className={classes.imgDouble} src={imageBG3} />
-          <Typography className={classes.textPink}>Stylist expert</Typography>
-          <Typography className={classes.textBold}>Lilly Adams</Typography>
+          <img className={classes.imgDouble} src={mail} />
+          <Typography className={classes.textPink}>Mail</Typography>
+          <Typography className={classes.textBold}>mail@company.com</Typography>
           <Typography className={classes.textgray}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
             purus sit
           </Typography>
-          <Box className={classes.paddingBot}>
-            <img src={imageIcon1} />
-            <img src={imageIcon2} />
-            <img src={imageIcon3} />
-          </Box>
         </Box>
       </Box>
     </Box>
   );
 };
 
-export default InfoProfess;
+export default ContactForm;

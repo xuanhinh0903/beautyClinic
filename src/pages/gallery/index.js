@@ -338,16 +338,32 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "1440px",
     margin: "0 auto",
   },
+  bgAll: {
+    "& .wrapperHeader": {
+      padding: "0 0 125px 0",
+    },
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="left" ref={ref} {...props} />;
+  return <Slide direction="top" ref={ref} {...props} />;
 });
 
 const Gallery = () => {
   const classes = useStyles();
 
   const [open, setOpen] = useState(false);
+
+  const [offset, setOffset] = React.useState(0);
+
+  React.useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.scrollTo(0, 0);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -359,12 +375,11 @@ const Gallery = () => {
 
   return (
     <Box className={classes.bgAll}>
-      <Box className={classes.wrap1440}>
-        <Box className={classes.wrapper}>
-          <Box className={"wrapperHeader"}>
-            <Header handleClick={handleClickOpen} />
-          </Box>
-
+      <Box className={"wrapperHeader"}>
+        <Header handleClick={handleClickOpen} />
+      </Box>
+      <Box className={classes.wrapper}>
+        <Box className={classes.wrap1440}>
           <Box className={classes.flexRequest}>
             <Box className={classes.blockText}>
               <Typography className="textPink16">Our Gallery</Typography>
@@ -487,7 +502,7 @@ const Gallery = () => {
         <BlockNew />
       </Dialog>
 
-      <Scroll />
+      {offset > 0 && <Scroll />}
     </Box>
   );
 };

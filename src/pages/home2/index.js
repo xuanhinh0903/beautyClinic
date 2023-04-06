@@ -75,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   flexAbout: {
     display: "flex",
     justifyContent: "space-between",
-    paddingBottom: "400px",
+    paddingBottom: "430px",
     [theme.breakpoints.down(theme.sm)]: {
       display: "block",
       alignItems: "center",
@@ -621,12 +621,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="left" ref={ref} {...props} />;
+  return <Slide direction="top" ref={ref} {...props} />;
 });
 
 const Home2 = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+
+  const [offset, setOffset] = React.useState(0);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -636,16 +638,23 @@ const Home2 = () => {
     setOpen(false);
   };
 
+  React.useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.scrollTo(0, 0);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <Box id="Home" className={classes.home}>
       <Box className={classes.bgTop}>
+        <Header handleClick={handleClickOpen} />
         <Box className={classes.wrapper}>
           <Box className={"wrapperHeader"}>
             <Box className={classes.wrapper1440}>
-              <Box className={"wrapperHeaderChild"}>
-                <Header handleClick={handleClickOpen} />
-              </Box>
-
+              <Box className={"wrapperHeaderChild"}></Box>
               <Box className={classes.flexAbout}>
                 <Box className={classes.flexAboutChild}>
                   <Typography className={classes.textAboutBold}>
@@ -921,9 +930,8 @@ const Home2 = () => {
           </Box>
         </Box>
       </Box>
-      {/* <h2>Width: {windowSize.innerWidth}</h2> */}
       <Footer />
-      <Scroll />
+      {offset > 0 && <Scroll />}
       <Dialog
         open={open}
         TransitionComponent={Transition}

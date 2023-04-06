@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   wrapHeader: {
-    padding: "41px 0 125px 0",
+    padding: "0 0 125px 0",
   },
   root: {
     textAlign: "center",
@@ -148,7 +148,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.lg)]: {
       display: "block",
       textAlign: "center",
-      // marginBottom: "80.64px",
+      "&:nth-child(2)": {
+        [theme.breakpoints.down(theme.lg)]: {
+          display: "flex",
+          flexDirection: "column-reverse",
+        },
+      },
     },
   },
   imgPlay: {
@@ -164,7 +169,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.lg)]: {
       display: "block",
       textAlign: "center",
-      margin: "0 auto",
+      margin: "0 auto 36px",
     },
     "& .textAboutBoldblueClient": {
       fontFamily: "Poppins",
@@ -382,10 +387,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="left" ref={ref} {...props} />;
+  return <Slide direction="top" ref={ref} {...props} />;
 });
 const Service = () => {
   const classes = useStyles();
+
+  const [offset, setOffset] = React.useState(0);
+
+  React.useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.scrollTo(0, 0);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = React.useState(false);
@@ -402,12 +418,8 @@ const Service = () => {
   };
   return (
     <Box className={classes.bgColorF}>
-      <Box className={classes.wrap1440}>
-        <Box className={classes.wrapper}>
-          <Box className={classes.wrapHeader}>
-            <Header handleClick={handleClickOpen} />
-          </Box>
-        </Box>
+      <Box className={classes.wrapHeader}>
+        <Header handleClick={handleClickOpen} />
       </Box>
 
       <Box className={classes.bgBubber}>
@@ -435,90 +447,77 @@ const Service = () => {
         </Box>
       </Box>
 
-      <Box className={classes.wrap1440}>
-        <Box className={classes.introduce1}>
-          <Box className={classes.wrapper}>
-            <Box className={classes.flex}>
-              <img className={classes.imgPlay} src={service1} />
-              <Box className={classes.flexsWithAbout}>
-                <Box className={classes.doubleButton}>
-                  <Typography className={"textAbout"}>
-                    Beauty Consultation
+      <Box className={classes.wrapper}>
+        <Box className={classes.wrap1440}>
+          <Box className={classes.flex}>
+            <img className={classes.imgPlay} src={service1} />
+            <Box className={classes.flexsWithAbout}>
+              <Box className={classes.doubleButton}>
+                <Typography className={"textAbout"}>
+                  Beauty Consultation
+                </Typography>
+                <Typography className={"textAboutBoldblueClient"}>
+                  We services beauty consultation
+                </Typography>
+                <Typography className={"textAboutBlurGray"}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
+                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
+                  libero.
+                </Typography>
+                <Box className="flexTextMore">
+                  <Typography className="textMore">
+                    Make an Appointment
                   </Typography>
-                  <Typography className={"textAboutBoldblueClient"}>
-                    We services beauty consultation
-                  </Typography>
-                  <Typography className={"textAboutBlurGray"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Elit, quam suscipit purus donec amet. Egestas volutpat
-                    facilisi eu libero.
-                  </Typography>
-                  <Box className="flexTextMore">
-                    <Typography className="textMore">
-                      Make an Appointment
-                    </Typography>
-                    <img src={more} />
-                  </Box>
+                  <img src={more} />
                 </Box>
               </Box>
             </Box>
           </Box>
-        </Box>
-
-        <Box className={classes.introduce1}>
-          <Box className={classes.wrapper}>
-            <Box className={classes.flex}>
-              <Box className={classes.flexsWithAbout}>
-                <Box
-                  className={`${classes.doubleButton} ${classes.paddingBT50}`}
-                >
-                  <Typography className={"textAbout"}>
-                    Beauty Consultation
+          <Box className={classes.flex}>
+            <Box className={classes.flexsWithAbout}>
+              <Box className={`${classes.doubleButton} ${classes.paddingBT50}`}>
+                <Typography className={"textAbout"}>
+                  Beauty Consultation
+                </Typography>
+                <Typography className={"textAboutBoldblueClient"}>
+                  We services beauty consultation
+                </Typography>
+                <Typography className={"textAboutBlurGray"}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
+                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
+                  libero.
+                </Typography>
+                <Box className="flexTextMore">
+                  <Typography className="textMore">
+                    Make an Appointment
                   </Typography>
-                  <Typography className={"textAboutBoldblueClient"}>
-                    We services beauty consultation
-                  </Typography>
-                  <Typography className={"textAboutBlurGray"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Elit, quam suscipit purus donec amet. Egestas volutpat
-                    facilisi eu libero.
-                  </Typography>
-                  <Box className="flexTextMore">
-                    <Typography className="textMore">
-                      Make an Appointment
-                    </Typography>
-                    <img src={more} />
-                  </Box>
+                  <img src={more} />
                 </Box>
               </Box>
-              <img className={classes.imgPlay} src={service2} />
             </Box>
+            <img className={classes.imgPlay} src={service2} />
           </Box>
-        </Box>
 
-        <Box className={classes.introduce1}>
-          <Box className={classes.wrapper}>
-            <Box className={classes.flex}>
-              <img className={classes.imgPlay} src={service3} />
-              <Box className={classes.flexsWithAbout}>
-                <Box className={classes.doubleButton}>
-                  <Typography className={"textAbout"}>
-                    Beauty Consultation
+          <Box className={classes.flex}>
+            <img className={classes.imgPlay} src={service3} />
+            <Box className={classes.flexsWithAbout}>
+              <Box className={classes.doubleButton}>
+                <Typography className={"textAbout"}>
+                  Beauty Consultation
+                </Typography>
+                <Typography className={"textAboutBoldblueClient"}>
+                  We services beauty consultation
+                </Typography>
+                <Typography className={"textAboutBlurGray"}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
+                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
+                  libero.
+                </Typography>
+                <Box className="flexTextMore">
+                  <Typography className="textMore">
+                    Make an Appointment
                   </Typography>
-                  <Typography className={"textAboutBoldblueClient"}>
-                    We services beauty consultation
-                  </Typography>
-                  <Typography className={"textAboutBlurGray"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Elit, quam suscipit purus donec amet. Egestas volutpat
-                    facilisi eu libero.
-                  </Typography>
-                  <Box className="flexTextMore">
-                    <Typography className="textMore">
-                      Make an Appointment
-                    </Typography>
-                    <img src={more} />
-                  </Box>
+                  <img src={more} />
                 </Box>
               </Box>
             </Box>
@@ -568,8 +567,8 @@ const Service = () => {
       >
         <BlockNew />
       </Dialog>
-      <Box className={classes.wrap1440}>
-        <Box className={classes.wrapper}>
+      <Box className={classes.wrapper}>
+        <Box className={classes.wrap1440}>
           <Box className={classes.selectOption}>
             <List className="wrapSelect" id="hehe1" size="sm">
               <ListItem
@@ -754,7 +753,7 @@ const Service = () => {
         <Footer />
       </Box>
 
-      <Scroll />
+      {offset > 0 && <Scroll />}
     </Box>
   );
 };

@@ -7,18 +7,18 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     top: 0,
     right: 0,
-    bottom: 0,
-    width: "60%",
+    left: 0,
+    width: "100%",
     backgroundColor: "#ffffff",
     "& .link": {
       textDecoration: "none",
       color: "#091156",
       "& .text": {
-        padding: "10px 0 10px 10px",
+        padding: "20px 40px",
         cursor: "pointer",
-        fontSize: "16px",
+        fontSize: "20px",
         fontWeight: "700",
-
+        textAlign: "center",
         "&:hover": {
           backgroundColor: "#f5f5fd",
           // color: "red",
@@ -34,6 +34,9 @@ const BlockNew = () => {
   return (
     <Box className={classes.wrapper}>
       <Link className="link" to={"/"}>
+        <Typography className="text">Home</Typography>
+      </Link>
+      <Link className="link" to={"/home2"}>
         <Typography className="text">Home +</Typography>
       </Link>
       <Link className="link" to={"/about"}>
@@ -48,7 +51,9 @@ const BlockNew = () => {
       <Link className="link" to={"/blog"}>
         <Typography className="text">Blog</Typography>
       </Link>
-      {/* <Typography className="text">Contact</Typography> */}
+      <Link className="link" to={"/contact"}>
+        <Typography className="text">Contact</Typography>
+      </Link>
     </Box>
   );
 };

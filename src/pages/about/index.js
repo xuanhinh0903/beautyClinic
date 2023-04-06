@@ -24,7 +24,7 @@ import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   wrapHeader: {
-    padding: "41px 0 125px 0",
+    padding: "0 0 125px 0",
   },
   textAbout: {
     color: "#FF64AE",
@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "24px",
     letterSpacing: "0.1em",
     color: "#8B8B8B",
-    maxWidth: "55%",
+    maxWidth: "76%",
     paddingBottom: "35px",
     [theme.breakpoints.down(theme.xl)]: {
       maxWidth: "inherit",
@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     height: "560px",
     width: "100%",
-    backgroundSize: "cover",
+    backgroundSize: "100% 100%",
     position: "relative",
     marginBottom: "136px",
     [theme.breakpoints.down(theme.xl)]: {
@@ -296,14 +296,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${BubbleBGFooter})`,
     backgroundRepeat: "no-repeat",
   },
-  wrapperAll: {
-    maxWidth: "1519.2px",
+  wrap1440: {
+    maxWidth: "1440px",
     margin: "0 auto",
   },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="left" ref={ref} {...props} />;
+  return <Slide direction="top" ref={ref} {...props} />;
 });
 
 const About = () => {
@@ -318,22 +318,34 @@ const About = () => {
     setOpen(false);
   };
 
+  const [offset, setOffset] = React.useState(0);
+
+  React.useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.scrollTo(0, 0);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <Box className={classes.wrapperAll}>
+      <Box className={classes.wrapHeader}>
+        <Header handleClick={handleClickOpen} />
+      </Box>
       <Box className={classes.wrapper}>
-        <Box className={classes.wrapHeader}>
-          <Header handleClick={handleClickOpen} />
-        </Box>
-
-        <Box className={classes.doubleButton}>
-          <Typography className={classes.textAbout}>About Us</Typography>
-          <Typography className={classes.textAboutBoldblue}>
-            We are a leading beauty clinic that has been around since 2002
-          </Typography>
-          <Typography className={classes.textAboutBlurGray}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus venenatis
-          </Typography>
+        <Box className={classes.wrap1440}>
+          <Box className={classes.doubleButton}>
+            <Typography className={classes.textAbout}>About Us</Typography>
+            <Typography className={classes.textAboutBoldblue}>
+              We are a leading beauty clinic that has been around since 2002
+            </Typography>
+            <Typography className={classes.textAboutBlurGray}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+              aliquam, purus sit amet luctus venenatis
+            </Typography>
+          </Box>
         </Box>
 
         <Box className={classes.bgMp4}>
@@ -348,9 +360,10 @@ const About = () => {
           <InfoProfess />
         </Box>
       </Box>
-      <Box className={classes.bgSlogan}>
-        <Box className={classes.bgSloganColor}>
-          <Box className={classes.wrapper}>
+
+      <Box>
+        <Box className={classes.bgSlogan}>
+          <Box className={classes.bgSloganColor}>
             <Typography className={classes.textSlogan}>
               Business Slogan
             </Typography>
@@ -366,8 +379,8 @@ const About = () => {
       </Box>
 
       <Box className={classes.bgBubbleBGFooter}>
-        <Box className={classes.outVision}>
-          <Box className={classes.wrapper}>
+        <Box className={classes.wrapper}>
+          <Box className={classes.wrap1440}>
             <Box className={classes.flex}>
               <img className={classes.imgPlay} src={Illustration} />
               <Box className={classes.flexsWithAbout}>
@@ -393,26 +406,28 @@ const About = () => {
         </Box>
 
         <Box className={classes.wrapper}>
-          <Box className={classes.flexReverse}>
-            <Box className={classes.flexsWithAbout}>
-              <Box className={classes.doubleButton}>
-                <Typography className={classes.textAbout}>
-                  Our Mission
-                </Typography>
-                <Typography className={classes.textAboutBoldblue}>
-                  Special & premium service to any clients
-                </Typography>
-                <Typography className={classes.textAboutBlurGray}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
-                  libero.
-                  <br />
-                  <br /> Nunc, ipsum ornare mauris sit quam quis enim. Varius
-                  tellus in suspendisse placerat.
-                </Typography>
+          <Box className={classes.wrap1440}>
+            <Box className={classes.flexReverse}>
+              <Box className={classes.flexsWithAbout}>
+                <Box className={classes.doubleButton}>
+                  <Typography className={classes.textAbout}>
+                    Our Mission
+                  </Typography>
+                  <Typography className={classes.textAboutBoldblue}>
+                    Special & premium service to any clients
+                  </Typography>
+                  <Typography className={classes.textAboutBlurGray}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Elit, quam suscipit purus donec amet. Egestas volutpat
+                    facilisi eu libero.
+                    <br />
+                    <br /> Nunc, ipsum ornare mauris sit quam quis enim. Varius
+                    tellus in suspendisse placerat.
+                  </Typography>
+                </Box>
               </Box>
+              <img className={classes.imgPlay} src={Illustration2} />
             </Box>
-            <img className={classes.imgPlay} src={Illustration2} />
           </Box>
         </Box>
 
@@ -429,12 +444,14 @@ const About = () => {
         </Box>
 
         <Box className={classes.wrapper240}>
-          <Box className={classes.wrappFlexIcon}>
-            <img className="imgIcon" src={iconLogo1} />
-            <img className="imgIcon" src={iconLogo2} />
-            <img className="imgIcon" src={iconLogo3} />
-            <img className="imgIcon" src={iconLogo4} />
-            <img className="imgIcon" src={iconLogo5} />
+          <Box className={classes.wrap1440}>
+            <Box className={classes.wrappFlexIcon}>
+              <img className="imgIcon" src={iconLogo1} />
+              <img className="imgIcon" src={iconLogo2} />
+              <img className="imgIcon" src={iconLogo3} />
+              <img className="imgIcon" src={iconLogo4} />
+              <img className="imgIcon" src={iconLogo5} />
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -453,7 +470,7 @@ const About = () => {
         <BlockNew />
       </Dialog>
 
-      <Scroll />
+      {offset > 0 && <Scroll />}
     </Box>
   );
 };

@@ -116,7 +116,15 @@ const buttonPlay = {
 };
 
 const useStyles = makeStyles((theme) => ({
-  wrapper: {},
+  wrapper: {
+    padding: "0 150px",
+    [theme.breakpoints.down(theme.xl)]: {
+      padding: "0 34px",
+    },
+    [theme.breakpoints.down(theme.lg)]: {
+      padding: "0 20px",
+    },
+  },
 
   check: {
     // padding: "0 191.5px 120.5px 151px",
@@ -124,15 +132,15 @@ const useStyles = makeStyles((theme) => ({
     alignItem: "center",
     justifyContent: "space-between",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px 82.5px 34px",
+      padding: "100px 0",
     },
     [theme.breakpoints.down(theme.lg)]: {
       display: "block",
       textAlign: "center",
-      padding: "0 50px",
+      padding: "0 ",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      padding: "0 20px",
+      padding: "100px 0 0 0",
     },
   },
   img: {
@@ -178,12 +186,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${bgimagehehe})`,
     backgroundRepeat: "no-repeat",
     paddingBottom: "100px !important",
-    padding: "41px 150px 152px",
+    // padding: "0 150px 152px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "41px 34px 152px",
+      // padding: "0 34px 152px",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      padding: "41px 20px 152px",
+      // padding: "0 20px 152px",
     },
   },
   fixPaddingHeader: {
@@ -289,7 +297,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
-    padding: "0 150px 134.4px",
+    padding: "0 0 134.4px",
     [theme.breakpoints.down(theme.xl)]: {
       padding: "0 34px 134.4px",
       justifyContent: "space-evenly",
@@ -304,7 +312,7 @@ const useStyles = makeStyles((theme) => ({
   flexAbout: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "0 150px 147px",
+    padding: "0 0 147px",
     [theme.breakpoints.down(theme.xl)]: {
       padding: "0 34px 147px",
     },
@@ -363,8 +371,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "87px",
   },
   imgProfess: {
-    paddingBottom: "144px",
-    padding: "0 150px 144px",
+    padding: "0 0 144px",
     [theme.breakpoints.down(theme.xl)]: {
       padding: "0 34px",
     },
@@ -399,13 +406,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="left" ref={ref} {...props} />;
+  return <Slide direction="top" ref={ref} {...props} />;
 });
 const Home1 = () => {
   const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
-  // const [visible, setVisible] = React.useState(false);
+  const [offset, setOffset] = React.useState(0);
+
+  React.useEffect(() => {
+    const onScroll = () => setOffset(window.pageYOffset);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.scrollTo(0, 0);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -424,11 +439,11 @@ const Home1 = () => {
       }}
     >
       <Box id="top" className={classes.fixPaddingHead}>
-        <Box className={classes.wrap1440}>
-          <Box className={classes.fixPaddingHeader}>
-            <Header handleClick={handleClickOpen} />
-          </Box>
-          <Box className={classes.wrapper}>
+        <Box className={classes.fixPaddingHeader}>
+          <Header handleClick={handleClickOpen} />
+        </Box>
+        <Box className={classes.wrapper}>
+          <Box className={classes.wrap1440}>
             <Box className={classes.check}>
               <Box className={classes.fixPadding} sx={{ paddingRight: "22px" }}>
                 <Typography
@@ -466,11 +481,13 @@ const Home1 = () => {
           </Box>
         </Box>
       </Box>
-      <Box className={classes.flexBox}>
-        <Box className={"check"}>
-          <Box className={classes.selectBlur}></Box>
-          <Box className={classes.selectBold}></Box>
-          <Box className={classes.selectBlur}></Box>
+      <Box className={classes.wrap1440}>
+        <Box className={classes.flexBox}>
+          <Box className={"check"}>
+            <Box className={classes.selectBlur}></Box>
+            <Box className={classes.selectBold}></Box>
+            <Box className={classes.selectBlur}></Box>
+          </Box>
         </Box>
       </Box>
       {/*  */}
@@ -489,98 +506,109 @@ const Home1 = () => {
       </Box>
 
       <Box className={classes.bgAbout}>
-        <Box className={classes.wrap1440}>
-          <Box className={classes.listWrapService}>
-            <Box className={classes.wrapperService}>
-              <img className={classes.ImgService} src={AnimationCheck} />
-              <Typography className={classes.textServiceIn}>
-                <Box className={classes.textBold18}>Beauty consultation</Box>
-              </Typography>
-              <Typography className={classes.textGreyService}>
-                <Box className={classes.textGrey14}>
-                  Non parturient amet, feugiat tellus sagittis, scelerisque eget
-                  nulla turpis.
-                </Box>
-              </Typography>
-            </Box>
+        <Box className={classes.wrapper}>
+          <Box className={classes.wrap1440}>
+            <Box className={classes.listWrapService}>
+              <Box className={classes.wrapperService}>
+                <img className={classes.ImgService} src={AnimationCheck} />
+                <Typography className={classes.textServiceIn}>
+                  <Box className={classes.textBold18}>Beauty consultation</Box>
+                </Typography>
+                <Typography className={classes.textGreyService}>
+                  <Box className={classes.textGrey14}>
+                    Non parturient amet, feugiat tellus sagittis, scelerisque
+                    eget nulla turpis.
+                  </Box>
+                </Typography>
+              </Box>
 
-            <Box className={classes.wrapperService}>
-              <img className={classes.ImgService} src={AnimationCheck} />
-              <Typography className={classes.textServiceIn}>
-                <Box className={classes.textBold18}>Beauty consultation</Box>
-              </Typography>
-              <Typography className={classes.textGreyService}>
-                <Box className={classes.textGrey14}>
-                  Non parturient amet, feugiat tellus sagittis, scelerisque eget
-                  nulla turpis.
-                </Box>
-              </Typography>
-            </Box>
+              <Box className={classes.wrapperService}>
+                <img className={classes.ImgService} src={AnimationCheck} />
+                <Typography className={classes.textServiceIn}>
+                  <Box className={classes.textBold18}>Beauty consultation</Box>
+                </Typography>
+                <Typography className={classes.textGreyService}>
+                  <Box className={classes.textGrey14}>
+                    Non parturient amet, feugiat tellus sagittis, scelerisque
+                    eget nulla turpis.
+                  </Box>
+                </Typography>
+              </Box>
 
-            <Box className={classes.wrapperService}>
-              <img className={classes.ImgService} src={AnimationCheck} />
-              <Typography className={classes.textServiceIn}>
-                <Box className={classes.textBold18}>Beauty consultation</Box>
-              </Typography>
-              <Typography className={classes.textGreyService}>
-                <Box className={classes.textGrey14}>
-                  Non parturient amet, feugiat tellus sagittis, scelerisque eget
-                  nulla turpis.
-                </Box>
-              </Typography>
-            </Box>
-          </Box>
-          <Box className={classes.flexAbout}>
-            <Box>
-              <Typography sx={textMainService}>About Us</Typography>
-              <Typography sx={textAboutBold}>
-                We are the best beauty clinic
-              </Typography>
-              <Typography className={classes.textAboutBlur} sx={textAboutBlur}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
-                quam suscipit purus donec amet. Egestas volutpat facilisi eu
-                libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius
-                tellus in suspendisse placerat.
-                <br />
-                <br /> Id dui erat sed quam tellus in purus. Pellentesque congue
-                fringilla cras tellus enim.
-              </Typography>
-              <Box className={classes.doubleButton}>
-                <Button
-                  className={"buttonPinkLearn"}
-                  sx={buttonPink}
-                  variant="text"
-                >
-                  Learn More
-                </Button>
-                <Button
-                  className={classes.flexButton}
-                  variant="text"
-                  sx={buttonPlay}
-                  size="large"
-                >
-                  <img style={{ paddingRight: "13px" }} src={play} />
-                  Watch Video
-                </Button>
+              <Box className={classes.wrapperService}>
+                <img className={classes.ImgService} src={AnimationCheck} />
+                <Typography className={classes.textServiceIn}>
+                  <Box className={classes.textBold18}>Beauty consultation</Box>
+                </Typography>
+                <Typography className={classes.textGreyService}>
+                  <Box className={classes.textGrey14}>
+                    Non parturient amet, feugiat tellus sagittis, scelerisque
+                    eget nulla turpis.
+                  </Box>
+                </Typography>
               </Box>
             </Box>
-            <img className={classes.imgAboutUs} src={aboutUs} />
           </Box>
+        </Box>
+        <Box className={classes.wrapper}>
+          <Box className={classes.wrap1440}>
+            <Box className={classes.flexAbout}>
+              <Box>
+                <Typography sx={textMainService}>About Us</Typography>
+                <Typography sx={textAboutBold}>
+                  We are the best beauty clinic
+                </Typography>
+                <Typography
+                  className={classes.textAboutBlur}
+                  sx={textAboutBlur}
+                >
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
+                  quam suscipit purus donec amet. Egestas volutpat facilisi eu
+                  libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius
+                  tellus in suspendisse placerat.
+                  <br />
+                  <br /> Id dui erat sed quam tellus in purus. Pellentesque
+                  congue fringilla cras tellus enim.
+                </Typography>
+                <Box className={classes.doubleButton}>
+                  <Button
+                    className={"buttonPinkLearn"}
+                    sx={buttonPink}
+                    variant="text"
+                  >
+                    Learn More
+                  </Button>
+                  <Button
+                    className={classes.flexButton}
+                    variant="text"
+                    sx={buttonPlay}
+                    size="large"
+                  >
+                    <img style={{ paddingRight: "13px" }} src={play} />
+                    Watch Video
+                  </Button>
+                </Box>
+              </Box>
+              <img className={classes.imgAboutUs} src={aboutUs} />
+            </Box>
 
-          <Box className={classes.paddingWidthProfess}>
-            <TextProfessTeam />
+            <Box className={classes.paddingWidthProfess}>
+              <TextProfessTeam />
+            </Box>
           </Box>
         </Box>
       </Box>
 
       <Box className={classes.bgContact}>
-        <Box className={classes.wrap1440}>
-          <Box className={classes.imgProfess}>
-            <InfoProfess />
-          </Box>
+        <Box className={classes.wrapper}>
+          <Box className={classes.wrap1440}>
+            <Box className={classes.imgProfess}>
+              <InfoProfess />
+            </Box>
 
-          <Box>
-            <ContactUs />
+            <Box>
+              <ContactUs />
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -589,7 +617,7 @@ const Home1 = () => {
         <Footer />
       </Box>
 
-      <Scroll />
+      {offset > 0 && <Scroll />}
 
       <Dialog
         open={open}

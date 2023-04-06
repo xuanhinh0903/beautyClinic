@@ -10,7 +10,7 @@ import imagePersion from "../../images/contact/contactPersion.svg";
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    padding: "0 150px",
+    // padding: "0 150px",
     display: "flex",
     justifyContent: "space-between",
     "& .textContact": {
