@@ -226,6 +226,11 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  hei100: {
+    [theme.breakpoints.down(theme.xl)]: {
+      height: "100%",
+    },
+  },
   blockwrap30: {
     backgroundColor: "#FFFFFF",
     boxShadow: "-2px 4px 31px 9px #F2F4FF",
@@ -242,7 +247,7 @@ const useStyles = makeStyles((theme) => ({
     "& .listSocial": {
       display: "flex",
       justifyContent: "space-between",
-      [theme.breakpoints.down(theme.sm)]: {
+      [theme.breakpoints.down(theme.md)]: {
         justifyContent: "space-evenly",
       },
       "& .blockSocial": {
@@ -263,14 +268,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1rem",
       lineHeight: "125%",
       paddingBottom: "30px",
-      [theme.breakpoints.down(theme.sm)]: {
+      [theme.breakpoints.down(theme.md)]: {
         textAlign: "center",
       },
     },
     "& .wrapListOption": {
       display: "flex",
       justifyContent: "space-between",
-      [theme.breakpoints.down(theme.sm)]: {
+      [theme.breakpoints.down(theme.md)]: {
         justifyContent: "center",
       },
       "& .paddingTop35": {
@@ -301,7 +306,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1rem",
       lineHeight: "125%",
       paddingBottom: "22px",
-      [theme.breakpoints.down(theme.sm)]: {
+      [theme.breakpoints.down(theme.md)]: {
         textAlign: "center",
       },
     },
@@ -313,14 +318,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "0.875rem",
       lineHeight: "20px",
       paddingBottom: "3px",
-      [theme.breakpoints.down(theme.sm)]: {
+      [theme.breakpoints.down(theme.md)]: {
         textAlign: "center",
       },
     },
     "& .wrapInfo": {
       display: "flex",
       marginBottom: "26px",
-      [theme.breakpoints.down(theme.sm)]: {
+      [theme.breakpoints.down(theme.md)]: {
         justifyContent: "center",
       },
 
@@ -352,6 +357,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.xl)]: {
       display: "flex",
       justifyContent: "space-evenly",
+      height: "100%",
     },
     [theme.breakpoints.down(theme.md)]: {
       display: "block",
@@ -495,8 +501,11 @@ const Blog = () => {
                 </Button>
               </Box>
 
-              <Box id="all" className={classes.wrapAll30}>
-                <Box className={classes.blockwrap30}>
+              <Box
+                id="all"
+                className={`${classes.wrapAll30} `}
+              >
+                <Box className={`${classes.blockwrap30} ${classes.hei100}`}>
                   <Typography className={"textBold"}>Recent Posts</Typography>
                   <Box className={"wrapInfo"}>
                     <img className={"imgChild30"} src={imgPost1} />

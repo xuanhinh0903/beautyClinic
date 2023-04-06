@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '2.25rem',
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
       paddingBottom: "44px",
@@ -120,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "50px",
       display: "inline-block",
       [theme.breakpoints.down(theme.xl)]: {
-        width: "90%",
+        width: "100%",
       },
       [theme.breakpoints.down(theme.xs)]: {
         width: "100%",

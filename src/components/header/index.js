@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "24px",
       letterSpacing: "0.1em",
       color: "#8B8B8B",
-      margin: "0 0 0 48.07px",
+      margin: "0 0 0 46.07px",
       cursor: "pointer",
       "& .link": {
         textDecoration: "none",
