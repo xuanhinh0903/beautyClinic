@@ -519,11 +519,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pdTop125: {
-    paddingTop: "70px",
-    [theme.breakpoints.down(theme.lg)]: {
-      paddingTop: "60px",
-    },
-    [theme.breakpoints.down(theme.sm)]: {
+    paddingTop: "50px",
+    // [theme.breakpoints.down(theme.lg)]: {
+    //   paddingTop: "40px",
+    // },
+    [theme.breakpoints.down(theme.xs)]: {
       paddingTop: "60px ",
     },
   },
