@@ -351,6 +351,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "1440px",
     margin: "0 auto",
   },
+  padding125: {
+    paddingTop: "125px",
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -387,7 +390,7 @@ const About = () => {
       </Box>
       <Box className={classes.wrapper}>
         <Box className={classes.wrap1440}>
-          <Box className={classes.doubleButton}>
+          <Box className={`${classes.doubleButton} ${classes.padding125}`}>
             <Typography className={classes.textAbout}>About Us</Typography>
             <Typography className={classes.textAboutBoldblue}>
               We are a leading beauty clinic that has been around since 2002

@@ -152,7 +152,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${BubbleBGFooter})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "100%",
-    paddingTop: "30px",
+    paddingTop: "125px",
+    [theme.breakpoints.down(theme.lg)]: {
+      paddingTop: "60px",
+    },
   },
   flex: {
     display: "flex",

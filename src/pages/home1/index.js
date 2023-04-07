@@ -183,6 +183,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down(theme.xl)]: {
       paddingRight: "0 !important",
+      paddingTop: "60px",
     },
   },
   fixPaddingHead: {
@@ -484,9 +485,11 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 600,
       fontSize: "2.25rem",
       maxWidth: "450px",
-      margin: "0 auto",
       paddingBottom: "22px",
       lineHeight: "1.3",
+      [theme.breakpoints.down(theme.xl)]: {
+        maxWidth: "initial",
+      },
       [theme.breakpoints.down(theme.sm)]: {
         fontSize: "1.875rem",
       },
@@ -503,6 +506,9 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: "483px",
       paddingBottom: "49px",
       fontSize: "1rem",
+      [theme.breakpoints.down(theme.xl)]: {
+        maxWidth: "initial",
+      },
       [theme.breakpoints.down(theme.md)]: {
         fontSize: "0.9rem",
         maxWidth: "initial",
@@ -510,6 +516,15 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down(theme.xs)]: {
         fontSize: "0.8rem",
       },
+    },
+  },
+  pdTop125: {
+    paddingTop: "70px",
+    [theme.breakpoints.down(theme.lg)]: {
+      paddingTop: "60px",
+    },
+    [theme.breakpoints.down(theme.sm)]: {
+      paddingTop: "60px ",
     },
   },
 }));
@@ -553,7 +568,7 @@ const Home1 = () => {
         </Box>
         <Box className={classes.wrapper}>
           <Box className={classes.wrap1440}>
-            <Box className={classes.check}>
+            <Box className={`${classes.check} ${classes.pdTop125}`}>
               <Box className={classes.fixPadding}>
                 <Typography
                   className={`${classes.wrapText} ${"textBoldBlue"} ${

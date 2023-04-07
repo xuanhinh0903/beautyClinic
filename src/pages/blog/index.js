@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${bgBlogTop})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% auto",
+    marginTop: "120px",
     [theme.breakpoints.down(theme.xl)]: {
       backgroundSize: "auto",
     },
@@ -55,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-between",
     padding: "121px 0 107px 0",
-    marginTop: "2.25rem",
+    marginTop: "240px",
     marginBottom: "108px",
     "& .textBold": {
       fontSize: "2.25rem",

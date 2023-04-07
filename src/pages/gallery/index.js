@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     paddingBottom: "75px",
-    paddingTop: "125px",
+    paddingTop: "250px",
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
@@ -103,6 +103,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.down(theme.lg)]: {
+      paddingTop: "180px",
       textAlign: "center",
       display: "block",
     },

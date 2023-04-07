@@ -169,6 +169,9 @@ const useStyles = makeStyles((theme) => ({
   bgFixedNot: {
     zIndex: "99",
     padding: "41px 150px 41px",
+    position: "fixed",
+    width: "100%",
+    top: "0",
     [theme.breakpoints.down(theme.xl)]: {
       padding: "41px 34px 41px",
     },
