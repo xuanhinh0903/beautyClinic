@@ -89,6 +89,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     paddingBottom: "75px",
+    paddingTop: "125px",
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
@@ -127,6 +128,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: "inherit",
         textAlign: "center",
       },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.5rem",
+      },
     },
   },
   wrapTextIntroduce: {
@@ -139,6 +146,9 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: "575px",
       margin: "0",
       paddingBottom: "126px",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.9rem",
+      },
 
       [theme.breakpoints.down(theme.xl)]: {
         display: "block",
@@ -193,6 +203,12 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down(theme.xl)]: {
         maxWidth: "inherit",
       },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.5rem",
+      },
     },
     "& .textAboutBlur": {
       fontFamily: "Poppins",
@@ -207,6 +223,12 @@ const useStyles = makeStyles((theme) => ({
       paddingBottom: "41px",
       [theme.breakpoints.down(theme.xl)]: {
         maxWidth: "initial",
+      },
+      [theme.breakpoints.down(theme.sm)]: {
+        paddingBottom: "0",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.9rem",
       },
     },
   },
@@ -244,6 +266,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1rem",
       lineHeight: "24px",
       letterSpacing: "0.1em",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
     },
   },
   flex: {
@@ -296,6 +321,12 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: "inherit",
         textAlign: "center",
       },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.5rem",
+      },
     },
     "& .textAbout": {
       color: "#FF64AE",
@@ -303,6 +334,10 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       lineHeight: "125%",
       paddingBottom: "12px",
+      fontSize: "1rem",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.9rem",
+      },
     },
     "& .textAboutBlurGray": {
       fontFamily: "Poppins",
@@ -316,6 +351,9 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: "inherit",
         textAlign: "center",
         paddingBottom: "30px",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
       },
     },
     "& .flexTextMore": {
@@ -340,7 +378,11 @@ const useStyles = makeStyles((theme) => ({
   },
   bgAll: {
     "& .wrapperHeader": {
-      padding: "0 0 125px 0",
+      padding: "0 0 0 0",
+      // [theme.breakpoints.down(theme.lg)]: {
+      //   padding: "0 0 60px 0",
+
+      // },
     },
   },
 }));

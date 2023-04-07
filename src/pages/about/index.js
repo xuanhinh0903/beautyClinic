@@ -24,7 +24,10 @@ import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   wrapHeader: {
-    padding: "0 0 125px 0",
+    padding: "0 0 0 0",
+    [theme.breakpoints.down(theme.xl)]: {
+      padding: "0 0 0 0",
+    },
   },
   textAbout: {
     color: "#FF64AE",
@@ -35,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1rem",
     [theme.breakpoints.down(theme.xl)]: {
       textAlign: "center",
+    },
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "0.9rem",
     },
   },
   textAboutBoldblue: {
@@ -48,6 +54,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.xl)]: {
       maxWidth: "inherit",
       textAlign: "center",
+    },
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "1.875rem",
+    },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "1.5rem",
     },
   },
 
@@ -65,18 +77,21 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       paddingBottom: "0",
     },
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "0.9rem",
+    },
   },
   wrapper: {
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px",
+      padding: "50px 34px 0",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      padding: "0 20px",
+      padding: "50px 20px 0",
     },
-    padding: "0 150px",
+    padding: "125px 150px 0",
   },
   doubleButton: {
-    paddingBottom: "58px",
+    padding: "58px",
   },
   bgMp4: {
     height: "100%",
@@ -108,10 +123,11 @@ const useStyles = makeStyles((theme) => ({
   wrapProfess: {
     paddingBottom: "87px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px",
+      // padding: "0 34px",
+      paddingBottom: "20px",
     },
     [theme.breakpoints.down(theme.xs)]: {
-      padding: "0 20px",
+      // padding: "0 20px",
     },
   },
 
@@ -142,7 +158,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.xl)]: {
       maxWidth: "100%",
       letterSpacing: "0",
+      fontSize: "1.875rem",
     },
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "1.5rem",
+    },
+    [theme.breakpoints.down(theme.xs)]: {},
   },
   textAboutBoldblueClient: {
     fontFamily: "Poppins",
@@ -151,6 +172,17 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "125%",
     color: "#091156",
     paddingBottom: "24px",
+    [theme.breakpoints.down(theme.xl)]: {
+      maxWidth: "100%",
+      letterSpacing: "0",
+      fontSize: "1.875rem",
+    },
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "1.7rem",
+    },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "1.4rem",
+    },
   },
   textSloganGrey: {
     fontFamily: "Poppins",
@@ -164,6 +196,9 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 auto",
     [theme.breakpoints.down(theme.xl)]: {
       maxWidth: "100%",
+    },
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "0.8rem",
     },
   },
   bgSlogan: {
@@ -254,6 +289,9 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.9rem",
+      },
     },
 
     "& .textBlueBold": {
@@ -263,6 +301,12 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.5rem",
+      },
     },
     "& .textGrey": {
       fontFamily: "Poppins",
@@ -270,6 +314,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.9rem",
+      },
     },
   },
   wrappFlexIcon: {
@@ -368,16 +415,18 @@ const About = () => {
       <Box>
         <Box className={classes.bgSlogan}>
           <Box className={classes.bgSloganColor}>
-            <Typography className={classes.textSlogan}>
-              Business Slogan
-            </Typography>
-            <Typography className={classes.textSloganBold}>
-              Best responsibility and service for our customers
-            </Typography>
-            <Typography className={classes.textSloganGrey}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-              aliquam, purus sit amet luctus venenatis
-            </Typography>
+            <Box className={classes.wrapper}>
+              <Typography className={classes.textSlogan}>
+                Business Slogan
+              </Typography>
+              <Typography className={classes.textSloganBold}>
+                Best responsibility and service for our customers
+              </Typography>
+              <Typography className={classes.textSloganGrey}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
+                aliquam, purus sit amet luctus venenatis
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Box>
@@ -436,14 +485,16 @@ const About = () => {
         </Box>
 
         <Box className={classes.wrapProfess}>
-          <Box className={classes.root}>
-            <Typography className={"textPink16"}>Our Clients</Typography>
-            <Typography className={"textBlueBold"}>
-              Well-known agencies
-            </Typography>
-            <Typography className={"textGrey"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
-            </Typography>
+          <Box className={classes.wrapper}>
+            <Box className={classes.root}>
+              <Typography className={"textPink16"}>Our Clients</Typography>
+              <Typography className={"textBlueBold"}>
+                Well-known agencies
+              </Typography>
+              <Typography className={"textGrey"}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              </Typography>
+            </Box>
           </Box>
         </Box>
 

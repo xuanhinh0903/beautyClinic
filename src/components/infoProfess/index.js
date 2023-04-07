@@ -37,11 +37,11 @@ const useStyles = makeStyles((theme) => ({
     color: "#FF64AE",
     fontFamily: "Poppins",
     paddingBottom: "15px",
-    [theme.breakpoints.down(theme.xl)]: {
-      fontSize: "1.25rem",
+    [theme.breakpoints.down(theme.md)]: {
+      fontSize: "0.875rem",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      fontSize: "1rem",
+      fontSize: "0.8rem",
     },
   },
   textBold: {
@@ -51,12 +51,15 @@ const useStyles = makeStyles((theme) => ({
     color: "#091156",
     fontFamily: "Poppins",
     paddingBottom: "6px",
+    fontSize: "1.125rem",
     [theme.breakpoints.down(theme.xl)]: {
       padding: "0 34px 10px",
-      fontSize: "1.375rem",
     },
-    [theme.breakpoints.down(theme.xl)]: {
+    [theme.breakpoints.down(theme.lg)]: {
       padding: "0 20px 10px",
+    },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "1rem",
     },
   },
   textgray: {
@@ -77,6 +80,9 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: "initial",
       padding: "0 20px 30px",
       fontSize: "1rem",
+    },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "0.9rem",
     },
   },
   blockCenter: {

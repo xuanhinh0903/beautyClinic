@@ -7,26 +7,41 @@ const useStyles = makeStyles((theme) => ({
     "& .textPink16": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
+      [theme.breakpoints.down(theme.md)]: {
+        fontSize: "0.9rem",
+      },
+      [theme.breakpoints.down(theme.md)]: {
+        fontSize: "0.8rem",
+      },
     },
 
     "& .textBlueBold": {
       fontFamily: "Poppins",
       fontWeight: "600",
-      fontSize: '2.25rem',
+      fontSize: "2.25rem",
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
+      [theme.breakpoints.down(theme.md)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.md)]: {
+        fontSize: "1.5rem",
+      },
     },
     "& .textGrey": {
       fontFamily: "Poppins",
       fontWeight: "400",
-      fontSize: '1rem',
+      fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
+      [theme.breakpoints.down(theme.md)]: {
+        fontSize: "0.875rem",
+      },
     },
   },
 }));

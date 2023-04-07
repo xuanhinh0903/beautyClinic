@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.sm)]: {
       padding: "91px 50px 53px",
     },
+
   },
   imgOne: {
     padding: "91px 139px 53px",
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "70px",
     },
     [theme.breakpoints.down(theme.xs)]: {
-      padding: "50px",
+      padding: "30px",
     },
   },
   textPink: {
@@ -46,6 +47,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.sm)]: {
       fontSize: "1rem",
     },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "0.9rem",
+      paddingBottom: "0",
+    },
   },
   textBold: {
     fontSize: "1.125rem",
@@ -55,11 +60,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Poppins",
     paddingBottom: "6px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px 10px",
-      fontSize: "22px",
-    },
-    [theme.breakpoints.down(theme.xl)]: {
       padding: "0 20px 10px",
+    },
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "1rem",
+    },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "0.9rem",
     },
   },
   textgray: {
@@ -79,7 +86,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(theme.sm)]: {
       maxWidth: "initial",
       padding: "0 20px 30px",
-      fontSize: "1rem",
+    },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "0.8rem",
     },
   },
   blockCenter: {

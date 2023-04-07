@@ -79,11 +79,15 @@ const useStyles = makeStyles((theme) => ({
       letterSpacing: "0.1em",
       paddingBottom: "26px",
       marginLeft: "27px",
+      fontSize: "1rem",
       [theme.breakpoints.down(theme.md)]: {
         justifyContent: "center",
         marginLeft: 0,
         display: "flex",
         alignItems: "center",
+      },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
       },
       [theme.breakpoints.down(theme.xs)]: {
         textAlign: "center",
@@ -93,6 +97,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "1rem",
         fontWeight: "700",
         margin: "0",
+        color: "#fff",
         "& .textBlur": {
           fontSize: "0.875rem",
           fontWeight: "500",
@@ -108,8 +113,12 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       fontStyle: "italic",
       display: "flex",
+      fontSize: "1rem",
       [theme.breakpoints.down(theme.md)]: {
         justifyContent: "center",
+      },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
       },
       [theme.breakpoints.down(theme.xs)]: {
         textAlign: "center",
@@ -117,6 +126,10 @@ const useStyles = makeStyles((theme) => ({
       },
       "& .italicizedEmail": {
         textDecorationLine: "underline",
+        fontSize: "1rem",
+        [theme.breakpoints.down(theme.sm)]: {
+          fontSize: "0.9rem",
+        },
       },
     },
     "& .wrapItalicized": {
@@ -147,13 +160,16 @@ const useStyles = makeStyles((theme) => ({
       padding: "0 12.66px 0 4.07px",
     },
     "& .textSmall": {
-      fontSize: "1.125rem",
+      fontSize: "1rem",
       fontWeight: "400",
       lineHeight: "24px ",
       letterSpacing: "0.1em",
       color: "#D7DBFF",
       fontFamily: "Poppins",
       paddingBottom: "11px",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
+      },
     },
   },
   blockAddress: {
@@ -172,12 +188,17 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       [theme.breakpoints.down(theme.md)]: {
         textAlign: "center",
+        fontSize: "0.9rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
       },
     },
   },
   listIcon: {
     [theme.breakpoints.down(theme.md)]: {
       textAlign: "center",
+      marginBottom: "20px",
     },
     "& .imageIon": {
       height: "70px",

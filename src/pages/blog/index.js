@@ -118,6 +118,9 @@ const useStyles = makeStyles((theme) => ({
           justifyContent: "center",
           paddingBottom: "20px",
         },
+        [theme.breakpoints.down(theme.xs)]: {
+          fontSize: "0.9rem",
+        },
         "& .imgFolder": {
           paddingRight: "15px",
         },
@@ -140,6 +143,12 @@ const useStyles = makeStyles((theme) => ({
           textAlign: "center",
           paddingBottom: "20px",
         },
+        [theme.breakpoints.down(theme.sm)]: {
+          fontSize: "1.875rem",
+        },
+        [theme.breakpoints.down(theme.xs)]: {
+          fontSize: "1.5rem",
+        },
       },
       "& .textBottomBlur": {
         fontWeight: 400,
@@ -152,6 +161,12 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(theme.xl)]: {
           paddingBottom: "20px",
           maxWidth: "inherit",
+        },
+        [theme.breakpoints.down(theme.sm)]: {
+          fontSize: "0.9rem",
+        },
+        [theme.breakpoints.down(theme.xs)]: {
+          fontSize: "0.8rem",
         },
       },
       "& .buttonPinkLearn": {
@@ -169,6 +184,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down(theme.xl)]: {
           margin: "0",
           width: "100%",
+        },
+        "& Button": {
+          fontSize: "0.9rem",
         },
         "& .imgIcon": {
           paddingLeft: "10px",

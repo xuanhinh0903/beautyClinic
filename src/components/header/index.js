@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import ClearIcon from "@mui/icons-material/Clear";
 import styles from "./style.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const buttonPink = {
   ":hover": {
@@ -21,6 +21,21 @@ const buttonPink = {
   width: "161.6px",
   height: "52px",
   bgcolor: "#FF64AE",
+  color: "#fff",
+  marginLeft: "53.19px",
+  borderRadius: "50px",
+  fontFamily: "Poppins !important",
+};
+
+const buttonPinkCheck = {
+  ":hover": {
+    bgcolor: "#f52e8d",
+  },
+  padding: 0,
+  display: "inline-block",
+  width: "161.6px",
+  height: "52px",
+  bgcolor: "#fb0078",
   color: "#fff",
   marginLeft: "53.19px",
   borderRadius: "50px",
@@ -136,10 +151,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "10px 150px 0",
 
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "10px 34px",
+      padding: "10px 34px 0",
     },
     [theme.breakpoints.down(theme.lg)]: {
-      padding: "10px 20px",
+      padding: "10px 20px 0",
     },
     "& .padding150": {
       // padding: "0 150px",
@@ -153,12 +168,12 @@ const useStyles = makeStyles((theme) => ({
   },
   bgFixedNot: {
     zIndex: "99",
-    padding: "40px 150px 0",
+    padding: "41px 150px 41px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "40px 34px",
+      padding: "41px 34px 41px",
     },
     [theme.breakpoints.down(theme.lg)]: {
-      padding: "40px 20px",
+      padding: "41px 20px 41px",
     },
   },
   wrapWidth: {
@@ -170,10 +185,28 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
       color: "#FFFFFF",
     },
+    "& Button": {
+      textTransform: "capitalize",
+    },
+  },
+
+  ButtonContactCheck: {
+    "& .linkText": {
+      textDecoration: "none",
+      color: "#FFFFFF",
+    },
+    "& Button": {
+      textTransform: "capitalize",
+    },
   },
 }));
 
 const Header = (props) => {
+  const location = useLocation();
+  console.log(
+    "🚀 ~ file: index.js:181 ~ Header ~ location:",
+    location.pathname
+  );
   const handleClick = () => {
     props.handleClick();
   };
@@ -209,14 +242,24 @@ const Header = (props) => {
               <Box className={"listOption"}>
                 <Box className={classes.optionSelect}>
                   <Typography className={"check"}>
-                    <Link className={"linkBold"} to={"/home2"}>
+                    <Link
+                      className={
+                        location.pathname === "/" ? "linkBold" : "link"
+                      }
+                      to={"/home2"}
+                    >
                       Home +
                     </Link>
                   </Typography>
                 </Box>
                 <Box className={classes.optionSelect}>
                   <Typography className={"check"}>
-                    <Link className={"link"} to={"/about"}>
+                    <Link
+                      className={
+                        location.pathname === "/about" ? "linkBold" : "link"
+                      }
+                      to={"/about"}
+                    >
                       About
                     </Link>
                   </Typography>
@@ -224,7 +267,12 @@ const Header = (props) => {
 
                 <Box className={classes.optionSelect}>
                   <Typography className={"check"}>
-                    <Link className={"link"} to={"/service"}>
+                    <Link
+                      className={
+                        location.pathname === "/service" ? "linkBold" : "link"
+                      }
+                      to={"/service"}
+                    >
                       Service
                     </Link>
                   </Typography>
@@ -232,7 +280,12 @@ const Header = (props) => {
 
                 <Box className={classes.optionSelect}>
                   <Typography className={"check"}>
-                    <Link className={"link"} to={"/gallery"}>
+                    <Link
+                      className={
+                        location.pathname === "/gallery" ? "linkBold" : "link"
+                      }
+                      to={"/gallery"}
+                    >
                       Gallery
                     </Link>
                   </Typography>
@@ -240,7 +293,12 @@ const Header = (props) => {
 
                 <Box className={classes.optionSelect}>
                   <Typography className={"check"}>
-                    <Link className={"link"} to={"/blog"}>
+                    <Link
+                      className={
+                        location.pathname === "/blog" ? "linkBold" : "link"
+                      }
+                      to={"/blog"}
+                    >
                       Blog
                     </Link>
                   </Typography>
@@ -249,7 +307,11 @@ const Header = (props) => {
               <Link className="linkText" to={"/contact"}>
                 <Button
                   className={classes.ButtonContact}
-                  sx={buttonPink}
+                  sx={
+                    location.pathname === "/contact"
+                      ? buttonPinkCheck
+                      : buttonPink
+                  }
                   variant="text"
                 >
                   Contact

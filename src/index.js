@@ -12,10 +12,10 @@ import "./style.css";
 const themes = createTheme({
   breakpoints: {
     values: {
-      xs: 487,
-      sm: 800,
+      xs: 510,
+      sm: 815,
       md: 900,
-      lg: 1010,
+      lg: 1060,
       xl: 1410,
       msx: 1400,
     },

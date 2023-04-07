@@ -30,28 +30,6 @@ import BlockNew from "../../components/blockNew";
 import Overlay from "../../components/overlay";
 import Scroll from "../../components/scroll";
 
-const textBoldBlue = {
-  fontFamily: "Poppins",
-  fontWeight: 600,
-  fontSize: "3rem",
-  lineHeight: "125%",
-  color: "#091156",
-  marginTop: "82px",
-  marginBottom: "10px",
-  maxWidth: "430px",
-};
-
-const textSmallBlue = {
-  fontFamily: "Poppins",
-  fontWeight: 500,
-  fontSize: "1rem",
-  lineHeight: "24px",
-  color: "#091156",
-  letterSpacing: "0.1em",
-  paddingBottom: "38px",
-  maxWidth: "470px",
-};
-
 const textMainService = {
   color: "#FF64AE",
   fontWeight: 600,
@@ -59,18 +37,6 @@ const textMainService = {
   lineHeight: "125%",
   paddingBottom: "12px",
 };
-
-const textMainServiceBold = {
-  fontFamily: "Poppins",
-  color: "#091156",
-  fontWeight: 600,
-  fontSize: "2.25rem",
-  maxWidth: "450px",
-  margin: "0 auto",
-  paddingBottom: "22px",
-  lineHeight: "1.3",
-};
-
 const textAboutBold = {
   fontFamily: "Poppins",
   color: "#091156",
@@ -79,19 +45,6 @@ const textAboutBold = {
   margin: "0 auto",
   paddingBottom: "22px",
   lineHeight: "1.3",
-};
-
-const textMainServiceBlur = {
-  fontWeight: 400,
-  letterSpacing: "0.1em",
-  color: "#8B8B8B",
-  fontFamily: "Poppins",
-  maxWidth: "848px",
-  margin: "0 auto",
-};
-
-const textAboutBlur = {
-  fontFamily: "Poppins",
 };
 
 const buttonPink = {
@@ -140,9 +93,10 @@ const useStyles = makeStyles((theme) => ({
       padding: "0 ",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      padding: "100px 0 0 0",
+      padding: "0 0 0 0",
     },
   },
+
   img: {
     [theme.breakpoints.down(theme.xl)]: {
       maxWidth: "60%",
@@ -159,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   wrapTextBig: {
     [theme.breakpoints.down(theme.xs)]: {
-      fontSize: "2.4375rem !important",
+      fontSize: "2.1375rem !important",
       marginTop: "0 !important",
     },
   },
@@ -172,13 +126,62 @@ const useStyles = makeStyles((theme) => ({
       padding: "41px 20px 0",
     },
   },
-  repsonBt: {
-    [theme.breakpoints.down(theme.lg)]: {
-      marginBottom: "20px !important",
-    },
-  },
   fixPadding: {
-    [theme.breakpoints.down(theme.lg)]: {
+    paddingRight: "22px",
+    "& .textBoldBlue": {
+      fontFamily: "Poppins",
+      fontWeight: 600,
+      fontSize: "3rem",
+      lineHeight: "125%",
+      color: "#091156",
+      marginTop: "82px",
+      marginBottom: "10px",
+      maxWidth: "430px",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "2.625rem",
+      },
+    },
+    "& .textSmallBlue": {
+      fontFamily: "Poppins",
+      fontWeight: 500,
+      fontSize: "1rem",
+      lineHeight: "24px",
+      color: "#091156",
+      letterSpacing: "0.1em",
+      paddingBottom: "38px",
+      maxWidth: "470px",
+      [theme.breakpoints.down(theme.lg)]: {
+        fontSize: "0.9rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
+    },
+    "& .repsonBt": {
+      "&:hover": {
+        backgroundColor: "#f52e8d",
+      },
+      textTransform: "capitalize",
+      padding: 0,
+      display: "inline-block",
+      width: "200px",
+      height: "58.36px",
+      backgroundColor: "#FF64AE",
+      color: "#fff",
+      borderRadius: "50px",
+      fontFamily: "Poppins",
+      fontSize: "1rem",
+      [theme.breakpoints.down(theme.lg)]: {
+        marginBottom: "20px !important",
+      },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
+    },
+    [theme.breakpoints.down(theme.xl)]: {
       paddingRight: "0 !important",
     },
   },
@@ -237,6 +240,48 @@ const useStyles = makeStyles((theme) => ({
   textService: {
     textAlign: "center",
     paddingBottom: "82px",
+    "& .textMainServiceBold": {
+      fontFamily: "Poppins",
+      color: "#091156",
+      fontWeight: 600,
+      fontSize: "2.25rem",
+      maxWidth: "450px",
+      margin: "0 auto",
+      paddingBottom: "22px",
+      lineHeight: "1.3",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.675rem",
+      },
+    },
+    "& .textMainService": {
+      color: "#FF64AE",
+      fontWeight: 600,
+      fontFamily: "Poppins",
+      lineHeight: "125%",
+      paddingBottom: "12px",
+      fontSize: "1rem",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.9rem",
+      },
+    },
+    "& .textMainServiceBlur": {
+      fontWeight: 400,
+      letterSpacing: "0.1em",
+      color: "#8B8B8B",
+      fontFamily: "Poppins",
+      maxWidth: "848px",
+      margin: "0 auto",
+      fontSize: "1rem",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
+    },
     [theme.breakpoints.down(theme.sm)]: {
       padding: "0 20px 82px",
     },
@@ -258,11 +303,8 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "37px",
     color: "#091156",
     [theme.breakpoints.down(theme.sm)]: {
-      fontSize: "1.875rem",
+      fontSize: "1rem",
       padding: "0 20px 25px",
-    },
-    [theme.breakpoints.down(theme.xs)]: {
-      fontSize: "1.125rem",
     },
   },
   textGreyService: {
@@ -282,6 +324,12 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: " 0.1em",
     color: " #8B8B8B",
     textAlign: "center",
+    [theme.breakpoints.down(theme.sm)]: {
+      fontSize: "0.813rem",
+    },
+    [theme.breakpoints.down(theme.xs)]: {
+      fontSize: "0.713rem",
+    },
   },
   wrapperService: {
     background: "#FFFFFF",
@@ -299,28 +347,35 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     padding: "0 0 134.4px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px 134.4px",
+      padding: "0 0 134.4px",
       justifyContent: "space-evenly",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      padding: "0 20px",
+      padding: "0",
     },
   },
   flexButton: {
-    color: "#8B8B8B",
+    "& .text": {
+      color: "#8B8B8B",
+      textTransform: "capitalize",
+      fontSize: "1rem",
+      fontWeight: "600",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
+      },
+    },
   },
   flexAbout: {
     display: "flex",
     justifyContent: "space-between",
     padding: "0 0 147px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px 147px",
       display: "block",
       textAlign: "center",
     },
-    [theme.breakpoints.down(theme.lg)]: {
-      padding: "0 20px",
-    },
+    // [theme.breakpoints.down(theme.lg)]: {
+    //   padding: "0 20px",
+    // },
   },
   imgAboutUs: {
     height: "100%",
@@ -361,26 +416,34 @@ const useStyles = makeStyles((theme) => ({
       color: "#fff",
       borderRadius: "50px",
       display: "inline-block",
+      fontSize: "1rem",
+      textTransform: "capitalize",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
+      },
       [theme.breakpoints.down(theme.xs)]: {
-        width: "100%",
         margin: "0 0 20px 0",
+        width: "100%",
       },
     },
   },
   paddingWidthProfess: {
     paddingBottom: "87px",
+    [theme.breakpoints.down(theme.sm)]: {
+      paddingBottom: "0",
+    },
   },
   imgProfess: {
     padding: "0 0 144px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px",
+      padding: "0",
     },
     [theme.breakpoints.down(theme.sm)]: {
-      padding: "0 20px",
+      // padding: "0 20px",
     },
-    [theme.breakpoints.down(theme.xl)]: {
-      paddingBottom: "0",
-    },
+    // [theme.breakpoints.down(theme.xl)]: {
+    //   paddingBottom: "0",
+    // },
   },
   bgAbout: {
     backgroundImage: `url(${imageBgMid})`,
@@ -402,6 +465,52 @@ const useStyles = makeStyles((theme) => ({
   wrap1440: {
     maxWidth: "1440px",
     margin: "0 auto",
+  },
+  wrapFlexAbout: {
+    "& .textMainService": {
+      color: "#FF64AE",
+      fontWeight: 600,
+      fontFamily: "Poppins",
+      lineHeight: "125%",
+      paddingBottom: "12px",
+      fontSize: "1rem",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
+      },
+    },
+    "& .textMainServiceBold": {
+      fontFamily: "Poppins",
+      color: "#091156",
+      fontWeight: 600,
+      fontSize: "2.25rem",
+      maxWidth: "450px",
+      margin: "0 auto",
+      paddingBottom: "22px",
+      lineHeight: "1.3",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.675rem",
+      },
+    },
+    "& .textAboutBlur": {
+      fontFamily: "Poppins",
+      fontWeight: 400,
+      letterSpacing: "0.1em",
+      color: "#8B8B8B",
+      fontFamily: "Poppins",
+      maxWidth: "483px",
+      paddingBottom: "49px",
+      fontSize: "1rem",
+      [theme.breakpoints.down(theme.md)]: {
+        fontSize: "0.9rem",
+        maxWidth: "initial",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
+    },
   },
 }));
 
@@ -445,34 +554,21 @@ const Home1 = () => {
         <Box className={classes.wrapper}>
           <Box className={classes.wrap1440}>
             <Box className={classes.check}>
-              <Box className={classes.fixPadding} sx={{ paddingRight: "22px" }}>
+              <Box className={classes.fixPadding}>
                 <Typography
-                  className={`${classes.wrapText} ${classes.wrapTextBig}`}
-                  sx={textBoldBlue}
+                  className={`${classes.wrapText} ${"textBoldBlue"} ${
+                    classes.wrapTextBig
+                  }`}
                 >
                   Clinic & beauty consultant
                 </Typography>
-                <Typography className={classes.wrapText} sx={textSmallBlue}>
+                <Typography
+                  className={`${classes.wrapText} ${"textSmallBlue"}`}
+                >
                   It is a long established fact that a reader will be by the
                   readable content of a page.
                 </Typography>
-                <Button
-                  className={classes.repsonBt}
-                  sx={{
-                    ":hover": {
-                      bgcolor: "#f52e8d",
-                    },
-                    padding: 0,
-                    display: "inline-block",
-                    width: "200px",
-                    height: "58.36px",
-                    bgcolor: "#FF64AE",
-                    color: "#fff",
-                    borderRadius: "50px",
-                    fontFamily: "Poppins",
-                  }}
-                  variant="text"
-                >
+                <Button className={"repsonBt"} variant="text">
                   More Details
                 </Button>
               </Box>
@@ -493,11 +589,11 @@ const Home1 = () => {
       {/*  */}
       <Box className={classes.wrap1440}>
         <Box className={classes.textService}>
-          <Typography sx={textMainService}>Main Services</Typography>
-          <Typography sx={textMainServiceBold}>
+          <Typography className={"textMainService"}>Main Services</Typography>
+          <Typography className={"textMainServiceBold"}>
             Learn services to focus on your beauty
           </Typography>
-          <Typography sx={textMainServiceBlur}>
+          <Typography className={"textMainServiceBlur"}>
             Porta rhoncus orci condimentum vitae lobortis eu dignissim non
             massa. Non parturient amet, feugiat tellus sagittis, scelerisque
             eget nulla turpis.
@@ -553,15 +649,12 @@ const Home1 = () => {
         <Box className={classes.wrapper}>
           <Box className={classes.wrap1440}>
             <Box className={classes.flexAbout}>
-              <Box>
-                <Typography sx={textMainService}>About Us</Typography>
-                <Typography sx={textAboutBold}>
+              <Box className={classes.wrapFlexAbout}>
+                <Typography className={"textMainService"}>About Us</Typography>
+                <Typography className="textMainServiceBold">
                   We are the best beauty clinic
                 </Typography>
-                <Typography
-                  className={classes.textAboutBlur}
-                  sx={textAboutBlur}
-                >
+                <Typography className={"textAboutBlur"}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit,
                   quam suscipit purus donec amet. Egestas volutpat facilisi eu
                   libero. Nunc, ipsum ornare mauris sit quam quis enim. Varius
@@ -585,7 +678,7 @@ const Home1 = () => {
                     size="large"
                   >
                     <img style={{ paddingRight: "13px" }} src={play} />
-                    Watch Video
+                    <Typography className="text">watch video</Typography>
                   </Button>
                 </Box>
               </Box>

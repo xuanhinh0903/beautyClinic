@@ -19,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Poppins",
       lineHeight: "125%",
       paddingBottom: "12px",
+      fontSize: "1rem",
+      [theme.breakpoints.down(theme.sm)]: {
+        maxWidth: "inherit",
+        fontSize: "0.9rem",
+      },
     },
     "& .textBlueBold": {
       fontFamily: "Poppins",
@@ -31,6 +36,12 @@ const useStyles = makeStyles((theme) => ({
       [theme.breakpoints.down(theme.xl)]: {
         maxWidth: "inherit",
       },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.675rem",
+      },
     },
     "& .textGrey": {
       fontFamily: "Poppins",
@@ -39,6 +50,12 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "24px",
       color: "#8B8B8B",
       paddingBottom: "44px",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
     },
 
     "& .description": {
@@ -67,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "0 34px",
+      // padding: "0 34px",
       display: "block",
       textAlign: "center",
     },
@@ -119,18 +136,25 @@ const useStyles = makeStyles((theme) => ({
       color: "#fff",
       borderRadius: "50px",
       display: "inline-block",
+      textTransform: "capitalize",
+      "&:hover": {
+        backgroundColor: "#f52e8d",
+      },
       [theme.breakpoints.down(theme.xl)]: {
+        margin: "0 0 12px 0",
         width: "100%",
+      },
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "0.9rem",
       },
       [theme.breakpoints.down(theme.xs)]: {
         width: "100%",
-        margin: "0 0 12px 0",
       },
     },
     "& .inputChild": {
       marginBottom: "38.32px",
       background: "#FFFFFF",
-      fontSize: "1rem ",
+      fontSize: "1rem",
       borderRadius: "15px",
       color: "#C5C5C5",
       "& label": {
@@ -216,15 +240,7 @@ const ContactUs = () => {
           className="description"
           color="danger"
         />
-        <Button
-          className={"buttonPinkLearn"}
-          sx={{
-            ":hover": {
-              backgroundColor: "#f52e8d",
-            },
-          }}
-          variant="text"
-        >
+        <Button className={"buttonPinkLearn"} variant="text">
           Send Message
         </Button>
       </Box>

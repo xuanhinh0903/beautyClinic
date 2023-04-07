@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
     "& .check": {
       "& svg": {
         fontSize: "2.25rem",
+        color:"#fff"
       },
     },
     [theme.breakpoints.down(theme.xl)]: {
@@ -132,13 +133,13 @@ const useStyles = makeStyles((theme) => ({
     top: "0",
     backgroundColor: "#44486ef7",
     boxShadow: "0 3px 5px rgba(57, 63, 72, 0.3)",
-    padding: "10px 150px 0",
+    padding: "10px 150px",
 
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "10px 34px",
+      padding: "10px 34px 0",
     },
     [theme.breakpoints.down(theme.lg)]: {
-      padding: "10px 20px",
+      padding: "10px 20px 0",
     },
     "& .padding150": {
       // padding: "0 150px",
@@ -152,12 +153,12 @@ const useStyles = makeStyles((theme) => ({
   },
   bgFixedNot: {
     zIndex: "99",
-    padding: "40px 150px 0",
+    padding: "41px 150px 41px",
     [theme.breakpoints.down(theme.xl)]: {
-      padding: "40px 34px",
+      padding: "41px 34px 0",
     },
     [theme.breakpoints.down(theme.lg)]: {
-      padding: "40px 20px",
+      padding: "41px 20px 0",
     },
     "& .padding150": {
       // padding: "0 150px 0",

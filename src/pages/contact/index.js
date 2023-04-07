@@ -48,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "center",
         // paddingBottom:"16px"
       },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
     },
     "& .blockTopContact": {
       "& .textPink16": {
@@ -69,6 +72,12 @@ const useStyles = makeStyles((theme) => ({
           maxWidth: "inherit",
           textAlign: "center",
           paddingBottom: "16px",
+        },
+        [theme.breakpoints.down(theme.sm)]: {
+          fontSize: "1.875rem",
+        },
+        [theme.breakpoints.down(theme.xs)]: {
+          fontSize: "1.5rem",
         },
       },
     },
@@ -113,6 +122,9 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "125%",
       color: "#FF64AE",
       paddingBottom: "12px",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.9rem",
+      },
     },
 
     "& .textBlueBold": {
@@ -122,6 +134,12 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "125%",
       color: "#091156",
       paddingBottom: "12px",
+      [theme.breakpoints.down(theme.sm)]: {
+        fontSize: "1.875rem",
+      },
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "1.5rem",
+      },
     },
     "& .textGrey": {
       fontFamily: "Poppins",
@@ -129,6 +147,9 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "1rem",
       lineHeight: "24px",
       color: "#8B8B8B",
+      [theme.breakpoints.down(theme.xs)]: {
+        fontSize: "0.8rem",
+      },
     },
   },
   blockContactForm: {
