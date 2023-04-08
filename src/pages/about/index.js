@@ -203,7 +203,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bgSlogan: {
     backgroundImage: `url(${slogan})`,
-    backgroundSize: "100% auto",
+    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "0 100%",
     textAlign: "center",

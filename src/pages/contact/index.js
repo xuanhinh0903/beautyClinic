@@ -30,10 +30,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignContent: "center",
     justifyContent: "space-between",
-    padding: "125px 0 44px 0",
-    [theme.breakpoints.down(theme.lg)]: {
+    padding: "250px 0 44px 0",
+    [theme.breakpoints.down(theme.xl)]: {
       flexDirection: "column",
-      padding: "125px 0 0 0",
+      padding: "250px 0 0 0",
       textAlign: "center",
     },
     "& .textGrey": {
