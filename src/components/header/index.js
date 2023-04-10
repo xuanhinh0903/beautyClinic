@@ -206,10 +206,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = (props) => {
   const location = useLocation();
-  console.log(
-    "🚀 ~ file: index.js:181 ~ Header ~ location:",
-    location.pathname
-  );
+  
   const handleClick = () => {
     props.handleClick();
   };

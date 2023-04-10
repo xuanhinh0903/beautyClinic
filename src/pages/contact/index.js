@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
       lineHeight: "24px",
       color: "#8B8B8B",
       maxWidth: "360px",
-      [theme.breakpoints.down(theme.lg)]: {
+      [theme.breakpoints.down(theme.xl)]: {
         maxWidth: "inherit",
         textAlign: "center",
         // paddingBottom:"16px"
@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
         lineHeight: "125%",
         color: "#091156",
         maxWidth: "450px",
-        [theme.breakpoints.down(theme.lg)]: {
+        [theme.breakpoints.down(theme.xl)]: {
           maxWidth: "inherit",
           textAlign: "center",
           paddingBottom: "16px",
